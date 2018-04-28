@@ -47,7 +47,8 @@ public class KnightCamera : MonoBehaviour {
         resetOriginalPos = true;
         offset = Vector3.Distance(this.transform.position, referencePoint.position);
         parent = this.transform.parent;
-        originalPosition = getReferenceCameraPosition(Statics.CameraOriginalReferencePosition).position;
+        lockCursor = true;
+        //originalPosition = getReferenceCameraPosition(Statics.CameraOriginalReferencePosition).position;
         if (lockCursor)
         {
             Cursor.lockState = CursorLockMode.Locked;
