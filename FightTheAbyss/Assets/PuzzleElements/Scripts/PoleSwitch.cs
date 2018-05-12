@@ -7,8 +7,13 @@ public class PoleSwitch : MonoBehaviour {
     public AudioSource activateLever;               // Sound to activate the lever
     public AudioSource shutDownLever;              // Sound to shut down the lever
 
-    public Transform LeverPole, ActiveLever, TurnedOffLever;	// Lid, Lid open rotation, Lid close rotationS
-    public float openSpeed = 5F;				// Opening speed
+    public Transform LeverPole, ActiveLever, TurnedOffLever;    // Pole of the lever, and transforms with rotations
+    public float leverSpeed = 5F;				// Lever moving speed speed
+
+    public bool hasWall = false;                // Indicates if the lever has an associated wall
+
+    public Transform MovableWall, WallUp, WallDown;     // Wall and transforms with positions
+    public float wallSpeed = 1F;                // Wall moving speed
 
     [HideInInspector]
     public bool _open = false;                  // Is the lever opened
@@ -25,19 +30,39 @@ public class PoleSwitch : MonoBehaviour {
         if (_open)
         {
             LeverSwitched(ActiveLever.rotation);
+            if (hasWall)
+            {
+                moveWall(WallDown.position);
+            }
         }
         else
         {
             LeverSwitched(TurnedOffLever.rotation);
+            if (hasWall)
+            {
+                moveWall(WallUp.position);
+            }
+            
         }
     }
 
     // Rotate the LeverPole to the requested rotation
     void LeverSwitched(Quaternion toRot)
     {
+        // Move lever
         if (LeverPole.rotation != toRot)
         {
-            LeverPole.rotation = Quaternion.Lerp(LeverPole.rotation, toRot, Time.deltaTime * openSpeed);
+            LeverPole.rotation = Quaternion.Lerp(LeverPole.rotation, toRot, Time.deltaTime * leverSpeed);
+        }
+    }
+
+    // Move wall to the requested position
+    void moveWall(Vector3 position)
+    {
+        // Move wall
+        if (MovableWall.position != position)
+        {
+            MovableWall.position = Vector3.MoveTowards(MovableWall.position, position, Time.deltaTime * wallSpeed);
         }
     }
 
