@@ -33,12 +33,16 @@ public class ActivateChest : MonoBehaviour {
 	void ChestClicked(Quaternion toRot){
 		if(lid.rotation != toRot){
 			lid.rotation = Quaternion.Lerp(lid.rotation, toRot, Time.deltaTime * openSpeed);
-		}
+		} else if (canClose)
+        {
+            // If the movement is finished and the lid can't close, disable the script
+            Destroy(this);
+        }
 	}
 
     private void OnTriggerStay(Collider col)
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if ((col.CompareTag("Player")) && (Input.GetKeyDown(KeyCode.E)))
         {
             if (canClose)
             {
