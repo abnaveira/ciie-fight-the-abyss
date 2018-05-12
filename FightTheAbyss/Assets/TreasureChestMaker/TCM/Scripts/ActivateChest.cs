@@ -5,12 +5,22 @@ public class ActivateChest : MonoBehaviour {
 
 	public Transform lid, lidOpen, lidClose;	// Lid, Lid open rotation, Lid close rotation
 	public float openSpeed = 5F;				// Opening speed
-	public bool canClose;						// Can the chest be closed
-	
-	[HideInInspector]
+	public bool canClose;                       // Can the chest be closed
+
+    public AudioSource openChest;               // Sound to open the chest
+    public AudioSource closeChest;              // Sound to close the chest
+
+    [HideInInspector]
 	public bool _open;							// Is the chest opened
 
-	void Update () {
+    private void Start()
+    {
+        AudioSource[] sounds = GetComponents<AudioSource>();
+        openChest = sounds[0];
+        closeChest = sounds[1];
+    }
+
+    void Update () {
 		if(_open){
 			ChestClicked(lidOpen.rotation);
 		}
@@ -35,16 +45,21 @@ public class ActivateChest : MonoBehaviour {
                 if (_open)
                 {
                     _open = false;
-                    //METE SONIDO LOCO
-                } else
+                    closeChest.Play();
+                }
+                else
                 {
                     _open = true;
+                    openChest.Play();
                 }
-                //_open = !_open;
+
             }
             else
             {
-                _open = true;
+                if (!_open) { 
+                    _open = true;
+                    openChest.Play();
+                }
             }
         }
     }
