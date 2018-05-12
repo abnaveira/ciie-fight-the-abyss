@@ -36,6 +36,7 @@ namespace FightTheAbyss {
         public enum WeaponSelected {Crossbow,Axe}
         public WeaponSelected weaponSelected = WeaponSelected.Crossbow;
         public bool lockSprint;
+        public bool staminaBuff = false;    // Stamina Buff makes the character not lose stamina
 
 
         [System.Serializable]
@@ -163,7 +164,11 @@ namespace FightTheAbyss {
         {
             if (anim.GetBool(Statics.animSprint) && !lockSprint)
             {
-                stamina -= Statics.StaminaLossFromSprint;
+                // Stamina Buff makes the character not lose stamina
+                if (!staminaBuff)
+                {
+                    stamina -= Statics.StaminaLossFromSprint;
+                }
             }else if (stamina <= staminaMaxValue && !sprintInput)
             {
                 stamina += Statics.StaminaGain;

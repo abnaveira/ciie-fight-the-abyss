@@ -69,7 +69,7 @@ public class PoleSwitch : MonoBehaviour {
 
     private void OnTriggerStay(Collider col)
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if ((col.CompareTag("Player")) && (Input.GetKeyDown(KeyCode.E)))
         {
                 if (_open)
                 {
