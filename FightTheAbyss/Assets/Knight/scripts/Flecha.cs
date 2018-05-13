@@ -33,6 +33,10 @@ namespace FightTheAbyss
                     this.transform.position = hit.point;
                     rigid.isKinematic = true;
                     //coll.isTrigger = true;
+                    if (hit.transform.CompareTag("Enemy"))
+                    {
+                        hit.transform.gameObject.GetComponent<FightTheAbyss.EnemyScript>().TakeDamage(50);
+                    }
                 }
 
             }
