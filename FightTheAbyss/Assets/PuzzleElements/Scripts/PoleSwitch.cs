@@ -2,75 +2,80 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PoleSwitch : MonoBehaviour {
+namespace FightTheAbyss
+{
+    public class PoleSwitch : MonoBehaviour
+    {
 
-    public AudioSource activateLever;               // Sound to activate the lever
-    public AudioSource shutDownLever;              // Sound to shut down the lever
+        public AudioSource activateLever;               // Sound to activate the lever
+        public AudioSource shutDownLever;              // Sound to shut down the lever
 
-    public Transform LeverPole, ActiveLever, TurnedOffLever;    // Pole of the lever, and transforms with rotations
-    public float leverSpeed = 5F;				// Lever moving speed speed
+        public Transform LeverPole, ActiveLever, TurnedOffLever;    // Pole of the lever, and transforms with rotations
+        public float leverSpeed = 5F;               // Lever moving speed speed
 
-    public bool hasWall = false;                // Indicates if the lever has an associated wall
+        public bool hasWall = false;                // Indicates if the lever has an associated wall
 
-    public Transform MovableWall, WallUp, WallDown;     // Wall and transforms with positions
-    public float wallSpeed = 1F;                // Wall moving speed
+        public Transform MovableWall, WallUp, WallDown;     // Wall and transforms with positions
+        public float wallSpeed = 1F;                // Wall moving speed
 
-    [HideInInspector]
-    public bool _open = false;                  // Is the lever opened
+        [HideInInspector]
+        public bool _open = false;                  // Is the lever opened
 
-    // Use this for initialization
-    void Start () {
-        AudioSource[] sounds = GetComponents<AudioSource>();
-        shutDownLever = sounds[0];
-        activateLever = sounds[1];
-    }
-	
-	// Update is called once per frame
-	void Update () {
-        if (_open)
+        // Use this for initialization
+        void Start()
         {
-            LeverSwitched(ActiveLever.rotation);
-            if (hasWall)
+            AudioSource[] sounds = GetComponents<AudioSource>();
+            shutDownLever = sounds[0];
+            activateLever = sounds[1];
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            if (_open)
             {
-                moveWall(WallDown.position);
+                LeverSwitched(ActiveLever.rotation);
+                if (hasWall)
+                {
+                    moveWall(WallDown.position);
+                }
+            }
+            else
+            {
+                LeverSwitched(TurnedOffLever.rotation);
+                if (hasWall)
+                {
+                    moveWall(WallUp.position);
+                }
+
             }
         }
-        else
+
+        // Rotate the LeverPole to the requested rotation
+        void LeverSwitched(Quaternion toRot)
         {
-            LeverSwitched(TurnedOffLever.rotation);
-            if (hasWall)
+            // Move lever
+            if (LeverPole.rotation != toRot)
             {
-                moveWall(WallUp.position);
+                LeverPole.rotation = Quaternion.Lerp(LeverPole.rotation, toRot, Time.deltaTime * leverSpeed);
             }
-            
         }
-    }
 
-    // Rotate the LeverPole to the requested rotation
-    void LeverSwitched(Quaternion toRot)
-    {
-        // Move lever
-        if (LeverPole.rotation != toRot)
+        // Move wall to the requested position
+        void moveWall(Vector3 position)
         {
-            LeverPole.rotation = Quaternion.Lerp(LeverPole.rotation, toRot, Time.deltaTime * leverSpeed);
+            // Move wall
+            if (MovableWall.position != position)
+            {
+                MovableWall.position = Vector3.MoveTowards(MovableWall.position, position, Time.deltaTime * wallSpeed);
+            }
         }
-    }
 
-    // Move wall to the requested position
-    void moveWall(Vector3 position)
-    {
-        // Move wall
-        if (MovableWall.position != position)
+
+        private void OnTriggerStay(Collider col)
         {
-            MovableWall.position = Vector3.MoveTowards(MovableWall.position, position, Time.deltaTime * wallSpeed);
-        }
-    }
-
-
-    private void OnTriggerStay(Collider col)
-    {
-        if ((col.CompareTag("Player")) && (Input.GetKeyDown(KeyCode.E)))
-        {
+            if ((col.CompareTag("Player")) && (Input.GetKeyDown(KeyCode.E)))
+            {
                 if (_open)
                 {
                     _open = false;
@@ -81,8 +86,9 @@ public class PoleSwitch : MonoBehaviour {
                     _open = true;
                     activateLever.Play();
                 }
+            }
         }
+
+
     }
-
-
 }

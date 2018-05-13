@@ -290,6 +290,7 @@ GameObject:
   - component: {fileID: 82044483177393464}
   - component: {fileID: 82568757610124254}
   - component: {fileID: 65410681489803938}
+  - component: {fileID: 114372750879717712}
   m_Layer: 0
   m_Name: Chest_Final
   m_TagString: Untagged
@@ -1539,6 +1540,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114372750879717712
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1669494149917546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bc4831a892b8ad4388f2aee67516fcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health_potion_chance: 0.5
+  unlimited_stamina_chance: 0.25
+  unlimited_crossbow_chance: 0.25
 --- !u!114 &114783964154863936
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1555,6 +1570,7 @@ MonoBehaviour:
   lidClose: {fileID: 4890946481658270}
   openSpeed: 5
   canClose: 0
+  spawnsPotions: 1
   openChest: {fileID: 0}
   closeChest: {fileID: 0}
   _open: 0
