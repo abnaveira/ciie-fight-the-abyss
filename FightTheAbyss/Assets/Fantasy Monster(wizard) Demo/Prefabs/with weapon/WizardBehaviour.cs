@@ -8,11 +8,13 @@ public class WizardBehaviour : MonoBehaviour {
     const float attackSpeed = 2;
     const float HP = 100;
     const int RANGE = 5;
+    const int DAMAGE = 20;
 
     float currentHP;
     float attackTime = 0;
     int attackState = Animator.StringToHash("Base Layer.attack_short_001");
     bool seenYou = false;
+    bool playerInRange = false;
     public Transform player;
     static Animator anim;
     static CharacterController controller;
@@ -82,12 +84,20 @@ public class WizardBehaviour : MonoBehaviour {
         anim.SetBool("damage_001", true);
     }
 
-    public void CastAttack()
+    private void CastAttack()
     {
         print("I am attacking");
-        Vector3 fwd = transform.TransformDirection(Vector3.forward);
-        if (Physics.Raycast(transform.position, fwd, RANGE))
-            print("I shot something.");
+        if (playerInRange)
+        {
+            player.gameObject.GetComponent<FightTheAbyss.States>().health -= DAMAGE;
+            print("I have attacked the player");
+        }
 
+    }
+
+    public void SetPlayerInRange(bool value)
+    {
+        print("Setting player to " + value);
+        playerInRange = value;
     }
 }
