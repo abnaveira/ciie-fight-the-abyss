@@ -5479,15 +5479,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1161019805166788, guid: 93cd055ed8cdb5b43a94fe3b11d9dbaf, type: 2}
-      propertyPath: m_Name
-      value: wizard_weapon_macanim DEMO
-      objectReference: {fileID: 0}
     - target: {fileID: 114591139575042770, guid: 93cd055ed8cdb5b43a94fe3b11d9dbaf,
         type: 2}
       propertyPath: player
       value: 
       objectReference: {fileID: 338967291}
+    - target: {fileID: 1161019805166788, guid: 93cd055ed8cdb5b43a94fe3b11d9dbaf, type: 2}
+      propertyPath: m_Name
+      value: wizard_weapon_macanim DEMO
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 93cd055ed8cdb5b43a94fe3b11d9dbaf, type: 2}
   m_IsPrefabParent: 0

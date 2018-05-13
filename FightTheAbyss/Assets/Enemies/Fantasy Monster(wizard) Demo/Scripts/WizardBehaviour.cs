@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WizardBehaviour : MonoBehaviour {
+public class WizardBehaviour : EnemyScript {
 
     const float speed = 4;
     const float attackSpeed = 2;
@@ -77,7 +77,7 @@ public class WizardBehaviour : MonoBehaviour {
         }
     }
 
-    public void TakeDamage(int amount, Vector3 hitPoint)
+    public override void TakeDamage(int amount)
     {
         seenYou = true;
         currentHP -= amount;
