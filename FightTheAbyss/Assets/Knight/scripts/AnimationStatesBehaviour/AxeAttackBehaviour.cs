@@ -51,6 +51,10 @@ namespace FightTheAbyss
                 if (!playOnce) { 
                     states.animationEventPlaySoundSource2("AxeHit");
                     playOnce = true;
+                    if (hit.transform.CompareTag("Enemy"))
+                    {
+                        hit.transform.gameObject.GetComponent<FightTheAbyss.EnemyScript>().TakeDamage(70);
+                    }
                 }
                 
 

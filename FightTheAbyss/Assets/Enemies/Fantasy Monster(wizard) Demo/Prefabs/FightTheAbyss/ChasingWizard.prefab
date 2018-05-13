@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 4349018943267656}
   - component: {fileID: 135674892199969832}
   - component: {fileID: 114638296569948022}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ParticleEffectCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1095,6 +1095,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1837732696805666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4467285005503942}
+  - component: {fileID: 114015236089858632}
+  m_Layer: 0
+  m_Name: EmptyPotionSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1846658551382830
 GameObject:
   m_ObjectHideFlags: 1
@@ -1755,6 +1771,19 @@ Transform:
   m_Father: {fileID: 4019080635411102}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 359.4863, y: 355.87524, z: 352.91357}
+--- !u!4 &4467285005503942
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1837732696805666}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.28, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4869917318969218}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4467959830092260
 Transform:
   m_ObjectHideFlags: 1
@@ -2135,7 +2164,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1161019805166788}
   m_LocalRotation: {x: -0, y: -0.9964538, z: -0, w: 0.08414195}
-  m_LocalPosition: {x: -17.515, y: 28.69549, z: -77.592}
+  m_LocalPosition: {x: -16.53481, y: 28.667439, z: -78.17089}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children:
   - {fileID: 4180006655427780}
@@ -2145,6 +2174,7 @@ Transform:
   - {fileID: 4237923135496220}
   - {fileID: 4600807564341514}
   - {fileID: 4349018943267656}
+  - {fileID: 4467285005503942}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -170.34702, z: 0}
@@ -2426,6 +2456,20 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &114015236089858632
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1837732696805666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bc4831a892b8ad4388f2aee67516fcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health_potion_chance: 0.7
+  unlimited_stamina_chance: 0.2
+  unlimited_crossbow_chance: 0.1
 --- !u!114 &114591139575042770
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2460,7 +2504,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 4
-  m_Center: {x: 0, y: 3.5, z: 4}
+  m_Center: {x: 0, y: 3.5, z: 6}
 --- !u!137 &137060604869145672
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

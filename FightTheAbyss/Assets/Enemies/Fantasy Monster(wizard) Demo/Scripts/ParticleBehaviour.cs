@@ -2,30 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ParticleBehaviour : MonoBehaviour
+namespace FightTheAbyss
 {
-    WizardBehaviour parentScript;
-
-    void Start()
+    public class ParticleBehaviour : MonoBehaviour
     {
-        parentScript = this.transform.parent.GetComponent<WizardBehaviour>();
-    }
+        WizardBehaviour parentScript;
 
-    // Update is called once per frame
-    void Update()
-    {
+        void Start()
+        {
+            parentScript = this.transform.parent.GetComponent<WizardBehaviour>();
+        }
 
-    }
+        // Update is called once per frame
+        void Update()
+        {
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-            parentScript.SetPlayerInRange(true);
-    }
+        }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-            parentScript.SetPlayerInRange(false);
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag("Player"))
+                parentScript.SetPlayerInRange(true);
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            if (other.CompareTag("Player"))
+                parentScript.SetPlayerInRange(false);
+        }
     }
 }
