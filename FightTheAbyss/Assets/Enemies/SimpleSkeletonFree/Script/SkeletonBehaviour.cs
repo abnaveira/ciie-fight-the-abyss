@@ -37,7 +37,7 @@ namespace FightTheAbyss
 
         // Update is called once per frame
         // Update is called once per frame
-        void Update()
+        void FixedUpdate()
         {
 
             // Check to decrease invulnerability counter
@@ -95,7 +95,6 @@ namespace FightTheAbyss
 
         public override void TakeDamage(int amount)
         {
- 
             chasing = true;
             if (remainingInvul <= 0)
             {
