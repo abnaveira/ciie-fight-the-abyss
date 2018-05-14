@@ -47,15 +47,20 @@ namespace FightTheAbyss
             BeginFade(-1);
         }
 
+        private void changeScene()
+        {
+            float fadeTime = BeginFade(1);
+            new WaitForSeconds(fadeTime);
+            SceneManager.LoadScene(loadLevel);
+        }
+
         [SerializeField] private string loadLevel;
 
         void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag("Player"))
             {
-                float fadeTime = BeginFade(1);
-                new WaitForSeconds(fadeTime);
-                SceneManager.LoadScene(loadLevel);
+                changeScene();
             }
         }
     }
