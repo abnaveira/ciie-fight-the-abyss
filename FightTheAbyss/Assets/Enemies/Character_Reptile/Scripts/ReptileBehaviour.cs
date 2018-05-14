@@ -24,8 +24,8 @@ namespace FightTheAbyss
         bool playerInRange = false;
 
         public Transform player;
-        static Animator anim;
-        static CharacterController controller;
+        private Animator anim;
+        private CharacterController controller;
 
         // Use this for initialization
         void Start()

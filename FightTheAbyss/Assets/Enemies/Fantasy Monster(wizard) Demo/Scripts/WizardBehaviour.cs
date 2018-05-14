@@ -8,7 +8,7 @@ namespace FightTheAbyss
     public class WizardBehaviour : FightTheAbyss.EnemyScript
     {
         // Character constants
-        const float speed = 4;
+        const float SPEED = 4;
         const float attackSpeed = 2;
         const float MAXHP = 100;
         const float MAXINVUL = .5f;
@@ -21,11 +21,18 @@ namespace FightTheAbyss
         float remainingInvul = 0;
         bool chasing = false;
         bool playerInRange = false;
+        bool playOnce = true;
+        Vector3 origin;
+        AudioSource attackSound;
+        AudioSource deathSound;
+        AudioSource hitSound;
 
         // Environmental variables
         public Transform player;
-        static Animator anim;
-        static CharacterController controller;
+        public float maximumDistance;
+        private Animator anim;
+        private CharacterController controller;
+
 
 
         // Set static environmental variables, initialise animation and health
@@ -35,6 +42,12 @@ namespace FightTheAbyss
             controller = GetComponent<CharacterController>();
             anim.SetBool("idle_normal", true);
             currentHP = MAXHP;
+            AudioSource[] sounds = GetComponents<AudioSource>();
+            deathSound = sounds[0];
+            attackSound = sounds[1];
+            hitSound = sounds[2];
+            origin = this.transform.position;
+
         }
 
         // Update is called once per frame
@@ -58,7 +71,7 @@ namespace FightTheAbyss
                 chasing = true;
 
             // If we are close enough and chasing, make character move
-            if (Vector3.Distance(player.position, this.transform.position) < 20 && chasing)
+            if (Vector3.Distance(player.position, this.transform.position) < 20 && chasing && !IsFarFromHome(direction))
             {
 
                 // This prevents the monster from swiveling upwards and downwards
@@ -82,7 +95,7 @@ namespace FightTheAbyss
                 {
                     // This stops the enemy from slipping along the ground with still legs
                     if (!anim.GetBool("lockedInPlace"))
-                        controller.SimpleMove(speed * this.transform.forward);
+                        controller.SimpleMove(SPEED * this.transform.forward);
                     anim.SetBool("move_forward_fast", true);
                     anim.SetBool("idle_combat", false);
                 }
@@ -91,10 +104,11 @@ namespace FightTheAbyss
                     anim.SetBool("move_forward_fast", false);
                     anim.SetBool("idle_combat", true);
                     // Check if an attack can be made and make it
-                    if (attackTime <= 0)
+                    if (attackTime <= 0 && (!anim.GetBool("dying")))
                     {
                         anim.SetBool("attack_short_001", true);
                         anim.SetFloat("attackTime", attackSpeed);
+                        attackSound.Play();
                     }
                 }
             }
@@ -104,6 +118,22 @@ namespace FightTheAbyss
                 anim.SetBool("idle_combat", false);
                 anim.SetBool("move_forward_fast", false);
                 chasing = false;
+
+                Vector3 difference = origin - this.transform.position;
+                if (difference.magnitude > 2)
+                {
+                    anim.SetBool("idle_normal", false);
+                    anim.SetBool("idle_combat", false);
+                    anim.SetBool("move_forward_fast", true);
+                    this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(difference), 0.1f);
+                    controller.SimpleMove(SPEED * this.transform.forward);
+                }
+                else
+                {
+                    anim.SetBool("move_forward_fast", false);
+                    anim.SetBool("idle_normal", true);
+                }
+                chasing = false;
             }
         }
 
@@ -112,16 +142,23 @@ namespace FightTheAbyss
         {
             // Make it aware of your presence
             chasing = true;
-            if (remainingInvul <= 0)
+            if (!anim.GetBool("dying"))
             {
-                remainingInvul = MAXINVUL;
-                currentHP -= amount;
-                if (currentHP > 0)
-                    anim.SetBool("damage_001", true);
-                else if(!anim.GetBool("dying"))
+                if (remainingInvul <= 0)
                 {
-                    anim.SetBool("dying", true);
-                    GetComponentInChildren<PotionSpawn>().DropPotion(1, this.transform.position, this.transform.rotation);
+                    remainingInvul = MAXINVUL;
+                    currentHP -= amount;
+                    if (currentHP > 0)
+                    {
+                        anim.SetBool("damage_001", true);
+                        hitSound.Play();
+                    }
+                    else
+                    {
+                        anim.SetBool("dying", true);
+                        GetComponentInChildren<PotionSpawn>().DropPotion(1, this.transform.position, this.transform.rotation);
+                        deathSound.Play();
+                    }
                 }
             }
         }
@@ -138,6 +175,17 @@ namespace FightTheAbyss
         public void SetPlayerInRange(bool value)
         {
             playerInRange = value;
+        }
+
+        private bool IsFarFromHome(Vector3 direction)
+        {
+            if (maximumDistance > 0)
+            {
+                Vector3 difference = origin - (this.transform.position + (direction / direction.magnitude));
+                return difference.magnitude > maximumDistance;
+            }
+            else
+                return false;
         }
     }
 
