@@ -2,18 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 namespace FightTheAbyss
 {
-    public class WizardBehaviour : FightTheAbyss.EnemyScript
+    public class SkeletonBehaviour : EnemyScript
     {
         // Character constants
-        const float speed = 4;
+        const float SPEED = 3;
         const float attackSpeed = 2;
-        const float MAXHP = 100;
+        const float MAXHP = 60;
         const float MAXINVUL = .5f;
-        const int RANGE = 5;
-        const int DAMAGE = 20;
+        const int RANGE = 2;
+        const int DAMAGE = 15;
 
         // Character variables
         float currentHP;
@@ -27,25 +26,27 @@ namespace FightTheAbyss
         static Animator anim;
         static CharacterController controller;
 
-
         // Set static environmental variables, initialise animation and health
         void Start()
         {
             anim = GetComponent<Animator>();
             controller = GetComponent<CharacterController>();
-            anim.SetBool("idle_normal", true);
+            anim.SetBool("isIdle", true);
             currentHP = MAXHP;
         }
 
         // Update is called once per frame
+        // Update is called once per frame
         void Update()
         {
+
             // Check to decrease invulnerability counter
             if (remainingInvul > 0)
                 remainingInvul -= Time.deltaTime;
 
             // Check to destroy if dead.
-            if (anim.GetBool("dead")) {
+            if (anim.GetBool("dead"))
+            {
                 Destroy(this.gameObject);
             }
 
@@ -66,51 +67,35 @@ namespace FightTheAbyss
                 this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(direction), 0.1f);
 
                 // Monster is no longer idle
-                anim.SetBool("idle_normal", false);
-                attackTime = anim.GetFloat("attackTime");
-
-                // Check for attack timer decreasing
-                if (attackTime > 0)
-                {
-                    anim.SetFloat("attackTime", attackTime -= Time.deltaTime);
-                    if (attackTime < (attackSpeed - attackSpeed / 4))
-                        anim.SetBool("attack_short_001", false);
-                }
+                anim.SetBool("isIdle", false);
 
                 // If too far for an attack
-                if (direction.magnitude > 4)
+                if (direction.magnitude > RANGE)
                 {
                     // This stops the enemy from slipping along the ground with still legs
                     if (!anim.GetBool("lockedInPlace"))
-                        controller.SimpleMove(speed * this.transform.forward);
-                    anim.SetBool("move_forward_fast", true);
-                    anim.SetBool("idle_combat", false);
+                        controller.SimpleMove(SPEED * this.transform.forward);
+                    anim.SetBool("isRunning", true);
+                    anim.SetBool("isAttacking", false);
                 }
                 else
                 {   // If close enough for an attack, start combat
-                    anim.SetBool("move_forward_fast", false);
-                    anim.SetBool("idle_combat", true);
-                    // Check if an attack can be made and make it
-                    if (attackTime <= 0)
-                    {
-                        anim.SetBool("attack_short_001", true);
-                        anim.SetFloat("attackTime", attackSpeed);
-                    }
+                    anim.SetBool("isRunning", false);
+                    anim.SetBool("isAttacking", true);
                 }
             }
             else
-            {   // If nothing in range, stand still
-                anim.SetBool("idle_normal", true);
-                anim.SetBool("idle_combat", false);
-                anim.SetBool("move_forward_fast", false);
+            {
+                anim.SetBool("isIdle", true);
+                anim.SetBool("isAttacking", false);
+                anim.SetBool("isRunning", false);
                 chasing = false;
             }
         }
 
-        // Called whenever the player attacks
         public override void TakeDamage(int amount)
         {
-            // Make it aware of your presence
+ 
             chasing = true;
             if (remainingInvul <= 0)
             {
@@ -127,18 +112,15 @@ namespace FightTheAbyss
         }
 
         private void CastAttack()
-        {
-            if (playerInRange)
-            {
-                player.gameObject.GetComponent<FightTheAbyss.States>().health -= DAMAGE;
+        {            
+            Collider[] hitColliders = Physics.OverlapSphere(transform.position, 2);
+            int i = 0;            
+            while (i < hitColliders.Length)
+            {                
+                if(hitColliders[i].CompareTag("Player"))
+                    player.gameObject.GetComponent<FightTheAbyss.States>().health -= DAMAGE;
+                i++;
             }
-
-        }
-
-        public void SetPlayerInRange(bool value)
-        {
-            playerInRange = value;
         }
     }
-
 }
