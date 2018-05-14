@@ -38,7 +38,7 @@ namespace FightTheAbyss
         }
 
         // Update is called once per frame
-        void Update()
+        void FixedUpdate()
         {
             // Check to decrease invulnerability counter
             if (remainingInvul > 0)
