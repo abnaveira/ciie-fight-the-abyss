@@ -124,7 +124,7 @@ namespace FightTheAbyss
                 else if (!anim.GetBool("dying"))
                 {
                     anim.SetBool("dying", true);
-                    GetComponentInChildren<PotionSpawn>().DropPotion(1, this.transform.position, this.transform.rotation);
+                    //GetComponentInChildren<PotionSpawn>().DropPotion(1, this.transform.position, this.transform.rotation);
                 }
             }
         }

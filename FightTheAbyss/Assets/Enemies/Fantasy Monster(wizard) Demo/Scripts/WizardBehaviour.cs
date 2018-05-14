@@ -30,6 +30,7 @@ namespace FightTheAbyss
         // Environmental variables
         public Transform player;
         public float maximumDistance;
+        public float potionProbability;
         private Animator anim;
         private CharacterController controller;
 
@@ -156,7 +157,7 @@ namespace FightTheAbyss
                     else
                     {
                         anim.SetBool("dying", true);
-                        GetComponentInChildren<PotionSpawn>().DropPotion(1, this.transform.position, this.transform.rotation);
+                        GetComponentInChildren<PotionSpawn>().DropPotion(this.potionProbability, this.transform.position, this.transform.rotation);
                         deathSound.Play();
                     }
                 }
