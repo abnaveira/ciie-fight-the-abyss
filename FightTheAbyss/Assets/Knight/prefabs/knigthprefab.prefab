@@ -4928,7 +4928,7 @@ MonoBehaviour:
   jumpForce: 20
   collisionsLayer:
     serializedVersion: 2
-    m_Bits: 4294967039
+    m_Bits: 4294966527
   grounded: 0
   onLocomotion: 0
   objectHitWithAxe: 0
@@ -4937,6 +4937,7 @@ MonoBehaviour:
   locomotionState: 1
   weaponSelected: 0
   lockSprint: 0
+  staminaBuff: 0
   sounds:
   - key: JumpStart
     value: {fileID: 8300000, guid: c7398c2d9d03dd04988801b731c19ff7, type: 3}
