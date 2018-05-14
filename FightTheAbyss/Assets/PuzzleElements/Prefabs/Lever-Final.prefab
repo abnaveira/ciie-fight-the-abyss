@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33942270703200958}
   - component: {fileID: 23456099941200684}
   - component: {fileID: 64184348725623096}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LeverPole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 33017236811989586}
   - component: {fileID: 23079260590283796}
   - component: {fileID: 64318072212509752}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,8 +61,8 @@ GameObject:
   - component: {fileID: 82560026226915226}
   - component: {fileID: 82889737784719080}
   - component: {fileID: 65211213709684330}
-  - component: {fileID: 114920422426141692}
-  m_Layer: 0
+  - component: {fileID: 114302311730623306}
+  m_Layer: 2
   m_Name: Lever-Final
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77,7 +77,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4976508911343362}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TurnedOffLever
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4028716413902994}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ActiveLever
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,8 +145,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1971093138948116}
-  m_LocalRotation: {x: -0.7069834, y: 0, z: 0, w: 0.7072302}
-  m_LocalPosition: {x: 1.2362478, y: -0.024356706, z: -6.8083677}
+  m_LocalRotation: {x: 0.49991274, y: 0.50008726, z: 0.49991274, w: -0.50008726}
+  m_LocalPosition: {x: -69.94, y: 151.41, z: -247.0678}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children:
   - {fileID: 4506212287949058}
@@ -154,7 +154,7 @@ Transform:
   - {fileID: 4976508911343362}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.98, y: 270, z: 0}
 --- !u!4 &4976508911343362
 Transform:
   m_ObjectHideFlags: 1
@@ -343,7 +343,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.034, y: 0.034, z: 0.016472967}
+  m_Size: {x: 0.034, y: 0.02, z: 0.016472967}
   m_Center: {x: 0, y: 1.4356965e-13, z: 0.0071808994}
 --- !u!82 &82560026226915226
 AudioSource:
@@ -505,7 +505,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114920422426141692
+--- !u!114 &114302311730623306
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -513,7 +513,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1971093138948116}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3998ea869e29d2c4caa13b284b6d3cbb, type: 3}
+  m_Script: {fileID: 11500000, guid: 128bee7dcab1c184fa33baba969ae557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   activateLever: {fileID: 0}
@@ -521,5 +521,5 @@ MonoBehaviour:
   LeverPole: {fileID: 4506212287949058}
   ActiveLever: {fileID: 4028716413902994}
   TurnedOffLever: {fileID: 4976508911343362}
-  openSpeed: 5
+  leverSpeed: 5
   _open: 0
