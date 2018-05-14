@@ -9,5 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/ScenePedro.unity
     guid: 6818d806780050a4fb2aca2242115b15
   - enabled: 1
-    path: Assets/Scenes/ScenePedro2.unity
-    guid: a04d73eab21a2ee49a7acbf8e89d51be
+    path: Assets/Scenes/Phase 1.unity
+    guid: 30cf01fca3de75042b134025cbcf3c07
+  - enabled: 1
+    path: Assets/Scenes/Phase 2.unity
+    guid: 2f507977e6e0ed8469459d401496697b

@@ -54,7 +54,6 @@ namespace FightTheAbyss
             if (other.CompareTag("Player"))
             {
                 float fadeTime = BeginFade(1);
-                /*yield return */
                 new WaitForSeconds(fadeTime);
                 SceneManager.LoadScene(loadLevel);
             }
