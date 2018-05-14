@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 65021098510568000}
   - component: {fileID: 114293682002923616}
   - component: {fileID: 82340435422761474}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Crossbow_Potion
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -16,19 +16,10 @@ namespace FightTheAbyss
         public GameObject torch2;
         public GameObject torch3;
 
-        public Transform Door1, Door2, Door1Down, Door2Down;     // Doors and transforms with positions
-        public float doorSpeed = 1F;                // Door moving speed
+        public GameObject ColliseumTowersDoor;
+        public GameObject FloatingPlatformsDoor;
 
         public AudioSource puzzleSolved;
-
-        /*
-        [HideInInspector]
-        private bool lever1 = false;
-        private bool lever2 = false;
-        private bool lever3 = false;
-        private bool lever4 = false;
-        private bool lever5 = false;
-        */
 
         private bool circuit3And;
         private bool Light3And;
@@ -44,6 +35,9 @@ namespace FightTheAbyss
         private PuzzlePoleSwitch scriptLever3;
         private PuzzlePoleSwitch scriptLever4;
         private PuzzlePoleSwitch scriptLever5;
+
+        private MoveDoor scriptColliseumDoor;
+        private MoveDoor scriptFloatingDoor;
 
         private bool puzzleIsSolved = false;
 
@@ -61,16 +55,13 @@ namespace FightTheAbyss
             scriptLever3 = lever3Object.GetComponent<PuzzlePoleSwitch>();
             scriptLever4 = lever4Object.GetComponent<PuzzlePoleSwitch>();
             scriptLever5 = lever5Object.GetComponent<PuzzlePoleSwitch>();
+
+            scriptColliseumDoor = ColliseumTowersDoor.GetComponent<MoveDoor>();
+            scriptFloatingDoor = FloatingPlatformsDoor.GetComponent<MoveDoor>();
         }
 
         void ChangeLightBools()
         {
-            /*
-            circuit3And = lever4 && lever5;
-            Light3And = (!lever3) && circuit3And;
-            Light2Or = lever2 || (!lever3);
-            Light1And = (!lever1) && circuit3And;
-            */
             circuit3And = scriptLever4._open && scriptLever5._open;
             Light3And = (!scriptLever3._open) && circuit3And;
             Light2Or = scriptLever2._open || (!scriptLever3._open);
@@ -93,29 +84,14 @@ namespace FightTheAbyss
         {
             if (puzzleIsSolved)
             {
-                moveDoor(Door1, Door1Down.position);
-                moveDoor(Door2, Door2Down.position);
-                // If doors are on positon, destroy the script
-                if ((Door1.position == Door1Down.position) && (Door2.position == Door2Down.position))
-                {
-                    Destroy(this);
-                }
+                scriptColliseumDoor.isDoorUp = false;
+                scriptFloatingDoor.moveDoorDown();
+                // Destroy the script, it is not needed anymore
+                //Destroy(this);
             } else
             {
                 ChangeLightBools();
             }
         }
-
-        // Move door to the requested position
-        void moveDoor(Transform Door, Vector3 position)
-        {
-            // Move door
-            if (Door.position != position)
-            {
-                Door.position = Vector3.MoveTowards(Door.position, position, Time.deltaTime * doorSpeed);
-            }
-            // DESTRUYE SCRIPT AL ACABAR DE MOVER LAS PAREDES
-        }
-
     }
 }
