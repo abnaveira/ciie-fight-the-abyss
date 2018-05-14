@@ -113,6 +113,36 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &18978460
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1927347327409394, guid: ef256d4d3e58a6b43a0afa967de8235b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 18978461}
+  m_Layer: 0
+  m_Name: FloatingPlatformsDoorUp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &18978461
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4252256459505764, guid: ef256d4d3e58a6b43a0afa967de8235b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 18978460}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: 16.514801, y: -37.29538, z: 22.400782}
+  m_LocalScale: {x: 8, y: 12, z: 0.25000012}
+  m_Children: []
+  m_Father: {fileID: 667329201}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
 --- !u!1001 &21089280
 Prefab:
   m_ObjectHideFlags: 0
@@ -19705,6 +19735,36 @@ Transform:
   m_PrefabParentObject: {fileID: 4000010605328026, guid: 09cd6fa57baf40045bb06c15669e4c60,
     type: 2}
   m_PrefabInternal: {fileID: 284774566}
+--- !u!1 &288874924
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1393044455758324, guid: ef256d4d3e58a6b43a0afa967de8235b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 288874925}
+  m_Layer: 0
+  m_Name: FloatingPlatformsDoorDown
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &288874925
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4730306398999598, guid: ef256d4d3e58a6b43a0afa967de8235b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 288874924}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: 16.514801, y: -47.77539, z: 22.400782}
+  m_LocalScale: {x: 8, y: 12, z: 0.25000012}
+  m_Children: []
+  m_Father: {fileID: 667329201}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
 --- !u!1001 &289500349
 Prefab:
   m_ObjectHideFlags: 0
@@ -32501,28 +32561,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 16, y: 2.0000582, z: 16.000008}
   m_Center: {x: -0.0000009536743, y: -0.9999695, z: 0.0000047683716}
---- !u!1 &545520122 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1030672143362002, guid: a5b8e894e79130743ab5e5f9e143adca,
-    type: 2}
-  m_PrefabInternal: {fileID: 1018315152}
---- !u!65 &545520123
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 545520122}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.3989198, y: 0.27078763, z: 4.9162498}
-  m_Center: {x: -0.00000071525574, y: 0, z: 0.000015258789}
---- !u!4 &545520126 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca,
-    type: 2}
-  m_PrefabInternal: {fileID: 1018315152}
 --- !u!1001 &550526730
 Prefab:
   m_ObjectHideFlags: 0
@@ -37005,36 +37043,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4121919113515382, guid: 5629d25d6e83bef47801bc782acd29ed,
     type: 2}
   m_PrefabInternal: {fileID: 744416129}
---- !u!1 &622205490
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1393044455758324, guid: ef256d4d3e58a6b43a0afa967de8235b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 622205491}
-  m_Layer: 0
-  m_Name: FloatingPlatformsDoorDown
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &622205491
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4730306398999598, guid: ef256d4d3e58a6b43a0afa967de8235b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 622205490}
-  m_LocalRotation: {x: 0.4942616, y: -0.5026814, z: -0.49562174, w: -0.50732243}
-  m_LocalPosition: {x: 23.75, y: -22.14, z: -47.01}
-  m_LocalScale: {x: 2.4622095, y: 0.17289999, z: 1.9884}
-  m_Children: []
-  m_Father: {fileID: 1812025169}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 268.797, y: -106.701996, z: 196.51399}
 --- !u!1001 &624772722
 Prefab:
   m_ObjectHideFlags: 0
@@ -37300,6 +37308,43 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 1.0000037, z: 2.0000064}
   m_Center: {x: -0.00000017881393, y: 0, z: -0.00000023841858}
+--- !u!1 &667329200
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 667329201}
+  m_Layer: 0
+  m_Name: DoorsMainArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &667329201
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 667329200}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 423.3252, y: 356.5254, z: -9.550781}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 765446843}
+  - {fileID: 784223909}
+  - {fileID: 1918590618}
+  - {fileID: 2018179767}
+  - {fileID: 18978461}
+  - {fileID: 288874925}
+  - {fileID: 1202347394}
+  - {fileID: 1750568379}
+  - {fileID: 1815108284}
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &671486422
 Prefab:
   m_ObjectHideFlags: 0
@@ -37875,6 +37920,75 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1001 &694605460
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 667329201}
+    m_Modifications:
+    - target: {fileID: 4937882458227164, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -26.325195
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937882458227164, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -37.29538
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937882458227164, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 22.400782
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937882458227164, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937882458227164, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937882458227164, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937882458227164, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937882458227164, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114098158597338230, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e,
+        type: 2}
+      propertyPath: DoorUp
+      value: 
+      objectReference: {fileID: 784223909}
+    - target: {fileID: 114098158597338230, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e,
+        type: 2}
+      propertyPath: DoorDown
+      value: 
+      objectReference: {fileID: 1918590618}
+    - target: {fileID: 1927842886732914, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e, type: 2}
+      propertyPath: m_Name
+      value: ColliseumTowersDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 114098158597338230, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e,
+        type: 2}
+      propertyPath: isDoorUp
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937882458227164, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937882458227164, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.25000012
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &698694221
 Prefab:
   m_ObjectHideFlags: 0
@@ -42121,8 +42235,8 @@ MonoBehaviour:
   torch1: {fileID: 1130847052}
   torch2: {fileID: 1070382895}
   torch3: {fileID: 1623268703}
-  ColliseumTowersDoor: {fileID: 545520122}
-  FloatingPlatformsDoor: {fileID: 1182728159}
+  ColliseumTowersDoor: {fileID: 765446838}
+  FloatingPlatformsDoor: {fileID: 2018179762}
   puzzleSolved: {fileID: 0}
 --- !u!82 &743915125
 AudioSource:
@@ -42258,6 +42372,16 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5629d25d6e83bef47801bc782acd29ed, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &765446838 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1927842886732914, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e,
+    type: 2}
+  m_PrefabInternal: {fileID: 694605460}
+--- !u!4 &765446843 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4937882458227164, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e,
+    type: 2}
+  m_PrefabInternal: {fileID: 694605460}
 --- !u!1001 &773147893
 Prefab:
   m_ObjectHideFlags: 0
@@ -42309,6 +42433,36 @@ Transform:
   m_PrefabParentObject: {fileID: 4000012643783990, guid: e65bfd7311cd5c548ab4ce4374b6ca1a,
     type: 2}
   m_PrefabInternal: {fileID: 773147893}
+--- !u!1 &784223908
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1927347327409394, guid: ef256d4d3e58a6b43a0afa967de8235b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 784223909}
+  m_Layer: 0
+  m_Name: ColliseumTowersDoorUp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &784223909
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4252256459505764, guid: ef256d4d3e58a6b43a0afa967de8235b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 784223908}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -26.325195, y: -37.29538, z: 22.400782}
+  m_LocalScale: {x: 8, y: 12, z: 0.25000012}
+  m_Children: []
+  m_Father: {fileID: 667329201}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &792422664
 Prefab:
   m_ObjectHideFlags: 0
@@ -61455,92 +61609,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1001 &985580535
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1061942732}
-    m_Modifications:
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 2.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -10.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -13.56
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0.70494515
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0.0059536407
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.008273633
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: -0.70918864
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 2.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 3.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 268.797
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -106.701996
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 106.514
-      objectReference: {fileID: 0}
-    - target: {fileID: 1030672143362002, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_Name
-      value: BossDoor
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.17290002
-      objectReference: {fileID: 0}
-    - target: {fileID: 114990812863661026, guid: a5b8e894e79130743ab5e5f9e143adca,
-        type: 2}
-      propertyPath: DoorUp
-      value: 
-      objectReference: {fileID: 1181650611}
-    - target: {fileID: 114990812863661026, guid: a5b8e894e79130743ab5e5f9e143adca,
-        type: 2}
-      propertyPath: DoorDown
-      value: 
-      objectReference: {fileID: 1532520266}
-    m_RemovedComponents:
-    - {fileID: 65580013427504864, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-  m_ParentPrefab: {fileID: 100100000, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &985580536 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca,
-    type: 2}
-  m_PrefabInternal: {fileID: 985580535}
 --- !u!1001 &988713602
 Prefab:
   m_ObjectHideFlags: 0
@@ -61743,88 +61811,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1001 &1018315152
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1061942732}
-    m_Modifications:
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -20.09137
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -12.66333
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -46.901012
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0.5026783
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0.49426332
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.5073297
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: -0.49561566
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 2.4622147
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1.9883977
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 268.797
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -106.701996
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 16.513992
-      objectReference: {fileID: 0}
-    - target: {fileID: 1030672143362002, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_Name
-      value: ColliseumTowersDoor
-      objectReference: {fileID: 0}
-    - target: {fileID: 114990812863661026, guid: a5b8e894e79130743ab5e5f9e143adca,
-        type: 2}
-      propertyPath: DoorUp
-      value: 
-      objectReference: {fileID: 2024764905}
-    - target: {fileID: 114990812863661026, guid: a5b8e894e79130743ab5e5f9e143adca,
-        type: 2}
-      propertyPath: DoorDown
-      value: 
-      objectReference: {fileID: 1376907435}
-    - target: {fileID: 65580013427504864, guid: a5b8e894e79130743ab5e5f9e143adca,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 65580013427504864, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-  m_ParentPrefab: {fileID: 100100000, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1001 &1019782912
 Prefab:
   m_ObjectHideFlags: 0
@@ -62345,9 +62331,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 743915123}
-  - {fileID: 545520126}
-  - {fileID: 1812025169}
-  - {fileID: 985580536}
+  - {fileID: 1519963333}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -66918,53 +66902,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8.000001, y: 16.000006, z: 2.00006}
   m_Center: {x: 0.00000035762795, y: 7.999995, z: -1.0000291}
---- !u!1 &1181650610
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1393044455758324, guid: ef256d4d3e58a6b43a0afa967de8235b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1181650611}
-  m_Layer: 0
-  m_Name: BossDoorUp
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1181650611
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4730306398999598, guid: ef256d4d3e58a6b43a0afa967de8235b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1181650610}
-  m_LocalRotation: {x: -0, y: -0, z: -4.656613e-10, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 985580536}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 268.797, y: -106.701996, z: 106.514}
---- !u!1 &1182728159 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1030672143362002, guid: a5b8e894e79130743ab5e5f9e143adca,
-    type: 2}
-  m_PrefabInternal: {fileID: 1812025168}
---- !u!65 &1182728160
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1182728159}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.3989205, y: 0.27079046, z: 4.9162507}
-  m_Center: {x: 0.0000014305115, y: 0, z: 0}
 --- !u!1001 &1184815971
 Prefab:
   m_ObjectHideFlags: 0
@@ -70511,6 +70448,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!4 &1202347394 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4937882458227164, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1959074234}
 --- !u!1 &1223479198
 GameObject:
   m_ObjectHideFlags: 0
@@ -70634,6 +70576,62 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5629d25d6e83bef47801bc782acd29ed, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &1231309980
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1519963333}
+    m_Modifications:
+    - target: {fileID: 4099316751642484, guid: cd9bdbba625239442b1f36f934aa5d2a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -30.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099316751642484, guid: cd9bdbba625239442b1f36f934aa5d2a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -12.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099316751642484, guid: cd9bdbba625239442b1f36f934aa5d2a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -46.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099316751642484, guid: cd9bdbba625239442b1f36f934aa5d2a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099316751642484, guid: cd9bdbba625239442b1f36f934aa5d2a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099316751642484, guid: cd9bdbba625239442b1f36f934aa5d2a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099316751642484, guid: cd9bdbba625239442b1f36f934aa5d2a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099316751642484, guid: cd9bdbba625239442b1f36f934aa5d2a, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1910703409571074, guid: cd9bdbba625239442b1f36f934aa5d2a, type: 2}
+      propertyPath: m_Name
+      value: ColliseumTowersCollider
+      objectReference: {fileID: 0}
+    - target: {fileID: 114187627051720142, guid: cd9bdbba625239442b1f36f934aa5d2a,
+        type: 2}
+      propertyPath: door
+      value: 
+      objectReference: {fileID: 765446838}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: cd9bdbba625239442b1f36f934aa5d2a, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1231309981 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4099316751642484, guid: cd9bdbba625239442b1f36f934aa5d2a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1231309980}
 --- !u!1001 &1231664013
 Prefab:
   m_ObjectHideFlags: 0
@@ -70702,36 +70700,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 16, y: 2.0000582, z: 16.000008}
   m_Center: {x: -0.0000009536743, y: -0.9999695, z: 0.000002861023}
---- !u!1 &1233394041
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1393044455758324, guid: ef256d4d3e58a6b43a0afa967de8235b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1233394042}
-  m_Layer: 0
-  m_Name: FloatingPlatformsDoorUp
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1233394042
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4730306398999598, guid: ef256d4d3e58a6b43a0afa967de8235b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1233394041}
-  m_LocalRotation: {x: 0.4942616, y: -0.5026814, z: -0.49562174, w: -0.50732243}
-  m_LocalPosition: {x: 23.93, y: -12.95, z: -46.95}
-  m_LocalScale: {x: 2.4622095, y: 0.17289999, z: 1.9884}
-  m_Children: []
-  m_Father: {fileID: 1812025169}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 268.797, y: -106.701996, z: 196.51399}
 --- !u!1001 &1239342786
 Prefab:
   m_ObjectHideFlags: 0
@@ -75667,36 +75635,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 1.0000037, z: 2.0000064}
   m_Center: {x: -0.00000017881393, y: 0, z: -0.00000023841858}
---- !u!1 &1376907434
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1393044455758324, guid: ef256d4d3e58a6b43a0afa967de8235b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1376907435}
-  m_Layer: 0
-  m_Name: ColliseumTowersDoorDown
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1376907435
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4730306398999598, guid: ef256d4d3e58a6b43a0afa967de8235b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1376907434}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0008658502, y: 0.0049146293, z: -4.7368436}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 545520126}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 268.797, y: -106.701996, z: 16.513992}
 --- !u!1001 &1388951302
 Prefab:
   m_ObjectHideFlags: 0
@@ -75940,23 +75878,6 @@ Transform:
   m_Father: {fileID: 489453850}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1413848254 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1030672143362002, guid: a5b8e894e79130743ab5e5f9e143adca,
-    type: 2}
-  m_PrefabInternal: {fileID: 985580535}
---- !u!65 &1413848255
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1413848254}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.39892, y: 0.27078873, z: 4.9162507}
-  m_Center: {x: 0, y: 0.000015258789, z: 0}
 --- !u!1 &1424582443
 GameObject:
   m_ObjectHideFlags: 0
@@ -80156,6 +80077,11 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!4 &1511434501 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4099316751642484, guid: cd9bdbba625239442b1f36f934aa5d2a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1971546702}
 --- !u!1001 &1513509115
 Prefab:
   m_ObjectHideFlags: 0
@@ -80214,36 +80140,36 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5629d25d6e83bef47801bc782acd29ed, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1532520265
+--- !u!1 &1519963332
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1393044455758324, guid: ef256d4d3e58a6b43a0afa967de8235b,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 1532520266}
+  - component: {fileID: 1519963333}
   m_Layer: 0
-  m_Name: BossDoorDown
+  m_Name: EnterFightArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1532520266
+--- !u!4 &1519963333
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4730306398999598, guid: ef256d4d3e58a6b43a0afa967de8235b,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1532520265}
-  m_LocalRotation: {x: -0, y: -0, z: -4.656613e-10, w: 1}
-  m_LocalPosition: {x: 0.001066476, y: -0.022531863, z: -4.5774565}
+  m_GameObject: {fileID: 1519963332}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 985580536}
+  m_Children:
+  - {fileID: 1511434501}
+  - {fileID: 1231309981}
+  m_Father: {fileID: 1061942732}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 268.797, y: -106.701996, z: 106.514}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1542168707
 Prefab:
   m_ObjectHideFlags: 0
@@ -88927,6 +88853,36 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 05cf1f56c99fa684db2c40aecb85762e, type: 3}
+--- !u!1 &1750568378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1927347327409394, guid: ef256d4d3e58a6b43a0afa967de8235b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1750568379}
+  m_Layer: 0
+  m_Name: BossDoorUp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1750568379
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4252256459505764, guid: ef256d4d3e58a6b43a0afa967de8235b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1750568378}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.0651855, y: -34.3154, z: 52.840782}
+  m_LocalScale: {x: 8, y: 16, z: 0.25}
+  m_Children: []
+  m_Father: {fileID: 667329201}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1762261865
 Prefab:
   m_ObjectHideFlags: 0
@@ -93097,92 +93053,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8.000001, y: 16.000006, z: 2.00006}
   m_Center: {x: 0.00000035762795, y: 7.999995, z: -1.0000291}
---- !u!1001 &1812025168
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1061942732}
-    m_Modifications:
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 23.93
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -12.95
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -46.95
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0.4942616
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0.5026814
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0.49562174
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: -0.50732243
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 2.4622095
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1.9884
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 268.797
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -106.701996
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 196.51399
-      objectReference: {fileID: 0}
-    - target: {fileID: 1030672143362002, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_Name
-      value: FloatingPlatformsDoor
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.17289999
-      objectReference: {fileID: 0}
-    - target: {fileID: 114990812863661026, guid: a5b8e894e79130743ab5e5f9e143adca,
-        type: 2}
-      propertyPath: DoorUp
-      value: 
-      objectReference: {fileID: 1233394042}
-    - target: {fileID: 114990812863661026, guid: a5b8e894e79130743ab5e5f9e143adca,
-        type: 2}
-      propertyPath: DoorDown
-      value: 
-      objectReference: {fileID: 622205491}
-    m_RemovedComponents:
-    - {fileID: 65580013427504864, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-  m_ParentPrefab: {fileID: 100100000, guid: a5b8e894e79130743ab5e5f9e143adca, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &1812025169 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4098250757920802, guid: a5b8e894e79130743ab5e5f9e143adca,
-    type: 2}
-  m_PrefabInternal: {fileID: 1812025168}
 --- !u!1 &1812612189
 GameObject:
   m_ObjectHideFlags: 0
@@ -93325,6 +93195,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8.000001, y: 16.000006, z: 2.00006}
   m_Center: {x: 0.00000035762795, y: 7.999995, z: -1.0000291}
+--- !u!1 &1815108283
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1393044455758324, guid: ef256d4d3e58a6b43a0afa967de8235b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1815108284}
+  m_Layer: 0
+  m_Name: BossDoorDown
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1815108284
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4730306398999598, guid: ef256d4d3e58a6b43a0afa967de8235b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1815108283}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.0651855, y: -49.5354, z: 52.840782}
+  m_LocalScale: {x: 8, y: 16, z: 0.25}
+  m_Children: []
+  m_Father: {fileID: 667329201}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1820824041
 Prefab:
   m_ObjectHideFlags: 0
@@ -97825,6 +97725,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8.000002, y: 2.00003, z: 8.000007}
   m_Center: {x: -0.00000071525574, y: -0.99999976, z: 0.00000333786}
+--- !u!1 &1918590617
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1393044455758324, guid: ef256d4d3e58a6b43a0afa967de8235b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1918590618}
+  m_Layer: 0
+  m_Name: ColliseumTowersDoorDown
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1918590618
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4730306398999598, guid: ef256d4d3e58a6b43a0afa967de8235b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1918590617}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -26.325195, y: -47.485382, z: 22.400782}
+  m_LocalScale: {x: 8, y: 12, z: 0.25000012}
+  m_Children: []
+  m_Father: {fileID: 667329201}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1928176939
 GameObject:
   m_ObjectHideFlags: 0
@@ -101661,6 +101591,75 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 6.204406, z: 2.0000243}
   m_Center: {x: -4.0000143, y: 1.4903274, z: 0.000009834766}
+--- !u!1001 &1959074234
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 667329201}
+    m_Modifications:
+    - target: {fileID: 4937882458227164, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -5.0651855
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937882458227164, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -34.3154
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937882458227164, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 52.840782
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937882458227164, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937882458227164, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937882458227164, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937882458227164, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937882458227164, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114098158597338230, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e,
+        type: 2}
+      propertyPath: DoorUp
+      value: 
+      objectReference: {fileID: 1750568379}
+    - target: {fileID: 114098158597338230, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e,
+        type: 2}
+      propertyPath: DoorDown
+      value: 
+      objectReference: {fileID: 1815108284}
+    - target: {fileID: 1927842886732914, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e, type: 2}
+      propertyPath: m_Name
+      value: BossDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 114098158597338230, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e,
+        type: 2}
+      propertyPath: isDoorUp
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937882458227164, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937882458227164, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 16
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1965463560
 GameObject:
   m_ObjectHideFlags: 0
@@ -101758,6 +101757,57 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 16, y: 2.0000582, z: 16.000008}
   m_Center: {x: -0.0000009536743, y: -0.9999695, z: 0.000002861023}
+--- !u!1001 &1971546702
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1519963333}
+    m_Modifications:
+    - target: {fileID: 4099316751642484, guid: cd9bdbba625239442b1f36f934aa5d2a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 34.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099316751642484, guid: cd9bdbba625239442b1f36f934aa5d2a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -15.803345
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099316751642484, guid: cd9bdbba625239442b1f36f934aa5d2a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -47.281013
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099316751642484, guid: cd9bdbba625239442b1f36f934aa5d2a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099316751642484, guid: cd9bdbba625239442b1f36f934aa5d2a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099316751642484, guid: cd9bdbba625239442b1f36f934aa5d2a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099316751642484, guid: cd9bdbba625239442b1f36f934aa5d2a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099316751642484, guid: cd9bdbba625239442b1f36f934aa5d2a, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1910703409571074, guid: cd9bdbba625239442b1f36f934aa5d2a, type: 2}
+      propertyPath: m_Name
+      value: FloatingPlatformsCollider
+      objectReference: {fileID: 0}
+    - target: {fileID: 114187627051720142, guid: cd9bdbba625239442b1f36f934aa5d2a,
+        type: 2}
+      propertyPath: door
+      value: 
+      objectReference: {fileID: 2018179762}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: cd9bdbba625239442b1f36f934aa5d2a, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1974556791
 Prefab:
   m_ObjectHideFlags: 0
@@ -102310,6 +102360,93 @@ Transform:
   m_PrefabParentObject: {fileID: 4000011586496940, guid: c0f29d0702be0d9418dbdb8b4516e646,
     type: 2}
   m_PrefabInternal: {fileID: 856906853}
+--- !u!1001 &2018179761
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 667329201}
+    m_Modifications:
+    - target: {fileID: 4937882458227164, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 16.514801
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937882458227164, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -37.29538
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937882458227164, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 22.400782
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937882458227164, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937882458227164, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937882458227164, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937882458227164, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937882458227164, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114098158597338230, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e,
+        type: 2}
+      propertyPath: DoorUp
+      value: 
+      objectReference: {fileID: 18978461}
+    - target: {fileID: 114098158597338230, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e,
+        type: 2}
+      propertyPath: DoorDown
+      value: 
+      objectReference: {fileID: 288874925}
+    - target: {fileID: 1927842886732914, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e, type: 2}
+      propertyPath: m_Name
+      value: FloatingPlatformsDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 114098158597338230, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e,
+        type: 2}
+      propertyPath: isDoorUp
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937882458227164, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937882458227164, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937882458227164, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937882458227164, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.25000012
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &2018179762 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1927842886732914, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e,
+    type: 2}
+  m_PrefabInternal: {fileID: 2018179761}
+--- !u!4 &2018179767 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4937882458227164, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e,
+    type: 2}
+  m_PrefabInternal: {fileID: 2018179761}
 --- !u!1001 &2024321658
 Prefab:
   m_ObjectHideFlags: 0
@@ -102357,36 +102494,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4000011207593222, guid: 7125738adae1f424988f1e1f2db904ad,
     type: 2}
   m_PrefabInternal: {fileID: 2024321658}
---- !u!1 &2024764904
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1393044455758324, guid: ef256d4d3e58a6b43a0afa967de8235b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 2024764905}
-  m_Layer: 0
-  m_Name: ColliseumTowersDoorUp
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2024764905
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4730306398999598, guid: ef256d4d3e58a6b43a0afa967de8235b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2024764904}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 545520126}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 268.797, y: -106.701996, z: 16.513992}
 --- !u!1001 &2025240842
 Prefab:
   m_ObjectHideFlags: 0

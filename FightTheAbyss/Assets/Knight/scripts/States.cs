@@ -104,7 +104,7 @@ namespace FightTheAbyss {
 
             grounded = isGrounded();
             UpdateLocomotion();
-            Debug.Log(anim.GetFloat(Statics.animDistanceToGround));
+            //Debug.Log(anim.GetFloat(Statics.animDistanceToGround));
         }
         public void FixedTick()
         {

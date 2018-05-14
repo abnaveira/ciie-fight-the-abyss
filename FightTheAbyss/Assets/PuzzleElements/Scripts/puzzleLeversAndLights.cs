@@ -84,14 +84,15 @@ namespace FightTheAbyss
         {
             if (puzzleIsSolved)
             {
-                scriptColliseumDoor.isDoorUp = false;
+                scriptColliseumDoor.moveDoorDown();
                 scriptFloatingDoor.moveDoorDown();
                 // Destroy the script, it is not needed anymore
-                //Destroy(this);
+                Destroy(this);
             } else
             {
                 ChangeLightBools();
             }
         }
+
     }
 }
