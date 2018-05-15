@@ -4,6 +4,9 @@ namespace FightTheAbyss
 {
     public class PotionSpawn : MonoBehaviour
     {
+        public GameObject healthPotion;
+        public GameObject staminaPotion;
+        public GameObject crossbowPotion;
 
         // Percentage of probability each potion has to drop
         public float health_potion_chance = 0.7f;
@@ -24,15 +27,15 @@ namespace FightTheAbyss
             float randomPotion = Random.value;
             if (randomPotion <= health_potion_chance)
             {
-                potionToInstantiate = (GameObject)AssetDatabase.LoadAssetAtPath("Assets/Potions--Low-Poly Weapons/POTIONS_TO_USE/Prefabs/Health_Potion.prefab", typeof(GameObject));
+                potionToInstantiate = healthPotion;
             }
             else if (randomPotion <= (health_potion_chance + unlimited_stamina_chance))
             {
-                potionToInstantiate = potionToInstantiate = (GameObject)AssetDatabase.LoadAssetAtPath("Assets/Potions--Low-Poly Weapons/POTIONS_TO_USE/Prefabs/Stamina_Potion.prefab", typeof(GameObject));
+                potionToInstantiate = staminaPotion;
             }
             else
             {
-                potionToInstantiate = (GameObject)AssetDatabase.LoadAssetAtPath("Assets/Potions--Low-Poly Weapons/POTIONS_TO_USE/Prefabs/Crossbow_Potion.prefab", typeof(GameObject));
+                potionToInstantiate = crossbowPotion;
             }
 
             // Instantiate said potion
