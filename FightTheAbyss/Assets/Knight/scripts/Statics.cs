@@ -14,7 +14,7 @@ namespace FightTheAbyss
         public static float WalkToIdleLerpFraction = 0.3f; //Entre 0 y 1. 0 tarda mas en parar y 1 para en seco
         public static float IdleToWalkLerpFraction = 0.05f;//Lo mismo que WalkToIdleLerpFraction pero para para empezar a andar.
 
-        public static float ObstacleForwardVerticalOffset = 0.05f;//Para hacer el obstacle check
+        public static float ObstacleForwardVerticalOffset = 0.1f;//Para hacer el obstacle check
         public static float DistanceToCheckDistanceFordward = 0.5f;
         #endregion
         #region statsParameters
@@ -32,7 +32,7 @@ namespace FightTheAbyss
         public static KeyCode WalkRunBut = KeyCode.LeftControl;
         public static KeyCode SprintBut = KeyCode.LeftShift;
         public static KeyCode MouseRightBut = KeyCode.Mouse1;
-        public static KeyCode MouseLeftBut = KeyCode.F;
+        public static KeyCode MouseLeftBut = KeyCode.Mouse0;
         public static KeyCode Button1 = KeyCode.Alpha1;
         public static KeyCode Button2 = KeyCode.Alpha2;
         #endregion

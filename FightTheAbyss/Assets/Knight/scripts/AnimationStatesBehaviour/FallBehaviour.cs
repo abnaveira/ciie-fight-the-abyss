@@ -16,7 +16,7 @@ namespace FightTheAbyss
         {
             if (states == null)
                 states = animator.transform.GetComponent<States>();
-            if (Physics.Raycast(states.LegFrontPosition(), -Vector3.up, out hit, Statics.DistanceToGroundMax, states.collisionsLayer))
+            if (Physics.Raycast(states.transform.position, -Vector3.up, out hit, Statics.DistanceToGroundMax, states.collisionsLayer))
                 distanceToGround = hit.distance;
             else
                 distanceToGround = Statics.DistanceToGroundMax;
@@ -25,13 +25,14 @@ namespace FightTheAbyss
             finalHeight = initialHeight;
         }
 
+
         // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
         override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
 
             if (!states.grounded)
             {
-                if (Physics.Raycast(states.LegFrontPosition(), -Vector3.up, out hit, Statics.DistanceToGroundMax,states.collisionsLayer)) { 
+                if (Physics.Raycast(states.transform.position, -Vector3.up, out hit, Statics.DistanceToGroundMax,states.collisionsLayer)) { 
                     distanceToGround = hit.distance;
                 }
                 else { 
@@ -39,7 +40,7 @@ namespace FightTheAbyss
 
                 }
 
-                Debug.DrawRay(states.LegFrontPosition(), -Vector3.up * Statics.DistanceToGroundMax, Color.cyan);
+                Debug.DrawRay(states.transform.position, -Vector3.up * Statics.DistanceToGroundMax, Color.cyan);
                 animator.SetFloat(Statics.animDistanceToGround, distanceToGround);
             }
             else
@@ -49,29 +50,12 @@ namespace FightTheAbyss
             }
             applyExtraGravityForce();
 
-
-            /*if (distanceToGround <= 0)
-            {
-                finalHeight = animator.transform.position.y;
-                float diff = initialHeight - finalHeight;
-
-                if (diff < MTPC_Statics.ToSoftFall)
-                    animator.SetInteger(MTPC_Statics.animSpecialType,
-                        MTPC_Statics.GetAnimSpecialType(MTPC_Statics.AnimSpecials.soft_fall));
-                else if (diff < MTPC_Statics.toRollFall)
-                    animator.SetInteger(MTPC_Statics.animSpecialType,
-                        MTPC_Statics.GetAnimSpecialType(MTPC_Statics.AnimSpecials.roll_fall));
-                else
-                    animator.SetInteger(MTPC_Statics.animSpecialType,
-                        MTPC_Statics.GetAnimSpecialType(MTPC_Statics.AnimSpecials.hard_fall));
-            }*/
         }
         // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-        override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-        {
-            //states.hasJumped = false;
-            // states.waitToJumpAgainCoroutine();
-        }
+      //  override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+       // {
+
+        //}
 
 
         // OnStateMove is called right after Animator.OnAnimatorMove(). Code that processes and affects root motion should be implemented here

@@ -64,6 +64,9 @@ namespace FightTheAbyss {
             }
             if (aux != null)
             {
+                
+                states.axeDefense = false;
+
                 states.animationEventPlaySoundSource2("WeaponChange");
                 equipedWeapon.weaponReference.SetParent(equipedWeapon.notEquipedWeaponHolder);
                 equipedWeapon.weaponReference.localRotation = Quaternion.identity;
@@ -189,16 +192,25 @@ namespace FightTheAbyss {
                 states.lockSprint = true;
                 if (!playOnce)
                 {
+                    states.axeDefense = true;
                     states.animationEventPlaySoundSource2("Shield");
                     playOnce = true;
                 }
-            }else if (states.stamina > 0)
+            }
+            else
             {
-                if (playOnce)
+                if (states.axeDefense)
                 {
-                    playOnce = false;
+                    states.axeDefense = false;
                 }
-                states.lockSprint = false;
+                if (states.stamina > 0)
+                {
+                    if (playOnce)
+                    {
+                        playOnce = false;
+                    }
+                    states.lockSprint = false;
+                }
             }
 
         }

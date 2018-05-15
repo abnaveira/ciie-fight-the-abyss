@@ -43,7 +43,6 @@ namespace FightTheAbyss
         {
             if (states.grounded && states.onLocomotion && !states.jumpInput)
             {
-                Debug.Log("1");
 
                 float targetSpeed;
                 if (states.sprintInput && states.vertical > 0 && !states.lockSprint)

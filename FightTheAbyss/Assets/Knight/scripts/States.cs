@@ -31,6 +31,7 @@ namespace FightTheAbyss {
         public bool onLocomotion;
         public bool objectHitWithAxe;
         public bool lowObstacleFordward;
+        public bool axeDefense;
         public bool busy;
         public enum CharStates {Idle,Moving,OnAir }
         public CharStates currentState;
@@ -119,12 +120,37 @@ namespace FightTheAbyss {
             UpdateStamina();
         }
 
+        public void takeDamage(float damage)
+        {
+            if (axeDefense)
+            {
+                float val = damage-stamina;
+                if (val > 0)
+                {
+                    health -= val;
+                    stamina = 0;
+                }
+                else
+                {
+                    stamina -= damage;
+                }
+            }
+            else
+            {
+                health -= damage;
+            }
+        }
+
         private void UpdateHealth()
         {
         
             Vector3 scale = healthUI.transform.localScale;
             if (health <= 0)
             {
+                UnityEngine.PostProcessing.VignetteModel.Settings settings = camera.postProccesingBehaviour.profile.vignette.settings;
+                settings.intensity = 0;
+                settings.mask = null;
+                camera.postProccesingBehaviour.profile.vignette.settings = settings;
                 scale.x = 0;
                 health = 0;
                 SceneManagement.lastScene = SceneManager.GetActiveScene().name;
@@ -218,10 +244,10 @@ namespace FightTheAbyss {
             RaycastHit hit=new RaycastHit();
             if( findObstacle(origin, direction, Statics.DistanceToCheckDistanceFordward,ref hit))
             {
-                Vector3 origin2 = origin + (transform.up * 0.8f);
+                Vector3 origin2 = origin + (transform.up * 0.7f);
                 origin2 += direction * 0.5f;
 
-                if (findObstacle(origin2, -transform.up,0.4f,ref hit))
+                if (findObstacle(origin2, -transform.up,0.3f,ref hit))
                 {
                     lowObstacleFordward = true;
                     skipGroundCheck = true;
