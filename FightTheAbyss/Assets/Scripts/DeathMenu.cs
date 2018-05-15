@@ -15,6 +15,7 @@ namespace FightTheAbyss
         public void Start()
         {
             Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
             scriptSceneFade = sceneFade.GetComponent<SceneChangeFade>();
         }
 
@@ -23,6 +24,7 @@ namespace FightTheAbyss
             if (!isCursorVisible)
             {
                 isCursorVisible = true;
+                Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
             }
         }
@@ -30,6 +32,7 @@ namespace FightTheAbyss
         public void RetryGame()
         {
             Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
             scriptSceneFade.changeScene(SceneManagement.lastScene);
         }
 

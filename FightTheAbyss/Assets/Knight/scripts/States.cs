@@ -128,7 +128,6 @@ namespace FightTheAbyss {
                 scale.x = 0;
                 health = 0;
                 SceneManagement.lastScene = SceneManager.GetActiveScene().name;
-                Cursor.visible = true;
                 SceneManager.LoadScene(SceneManagement.deathScene);
 
                 

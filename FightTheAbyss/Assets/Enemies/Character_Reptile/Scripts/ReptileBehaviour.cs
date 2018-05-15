@@ -58,7 +58,6 @@ namespace FightTheAbyss
             // Check to destroy if dead.
             if (anim.GetBool("dead"))
             {
-                Cursor.visible = true;
                 sceneChange.changeScene("Main Menu");
                 Destroy(this.gameObject);
             }
