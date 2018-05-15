@@ -27,6 +27,10 @@ namespace FightTheAbyss
         private Animator anim;
         private CharacterController controller;
         private SceneChangeFade sceneChange;
+        AudioSource deathSound;
+        AudioSource attackSound;
+        AudioSource hitSound;
+        AudioSource seenSound;
 
         // Use this for initialization
         void Start()
@@ -36,6 +40,11 @@ namespace FightTheAbyss
             controller = GetComponent<CharacterController>();
             anim.SetBool("isIdle", true);
             currentHP = MAXHP;
+            AudioSource[] sounds = GetComponents<AudioSource>();
+            deathSound = sounds[0];
+            attackSound = sounds[1];
+            hitSound = sounds[2];
+            seenSound = sounds[3];
         }
 
 
@@ -58,7 +67,10 @@ namespace FightTheAbyss
 
             // If it hasn't seen you before, start chase
             if (!chasing && angle < 50)
+            {
                 chasing = true;
+                seenSound.Play();
+            }
 
 
             // If we are close enough and chasing, make character move
@@ -118,22 +130,30 @@ namespace FightTheAbyss
         public override void TakeDamage(int amount)
         {
             chasing = true;
-            if (remainingInvul <= 0)
+            if (!anim.GetBool("dying"))
             {
-                remainingInvul = MAXINVUL;
-                currentHP -= amount;
-                if (currentHP > 0)
-                    anim.SetBool("damaged", true);
-                else if (!anim.GetBool("dying"))
+                if (remainingInvul <= 0)
                 {
-                    anim.SetBool("dying", true);
-                    //GetComponentInChildren<PotionSpawn>().DropPotion(1, this.transform.position, this.transform.rotation);
+                    remainingInvul = MAXINVUL;
+                    currentHP -= amount;
+                    if (currentHP > 0)
+                    {
+                        anim.SetBool("damaged", true);
+                        hitSound.Play();
+                    }
+                    else if (!anim.GetBool("dying"))
+                    {
+                        anim.SetBool("dying", true);
+                        deathSound.Play();
+                        //GetComponentInChildren<PotionSpawn>().DropPotion(1, this.transform.position, this.transform.rotation);
+                    }
                 }
             }
         }
 
         private void Attack(float dmg)
         {
+            attackSound.Play();
             Vector3 pos = transform.position;
             pos.z += 2;
             Collider[] hitColliders = Physics.OverlapSphere(pos, 4);
