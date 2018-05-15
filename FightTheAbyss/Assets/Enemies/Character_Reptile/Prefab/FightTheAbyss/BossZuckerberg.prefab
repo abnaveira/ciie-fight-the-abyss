@@ -504,6 +504,7 @@ GameObject:
   - component: {fileID: 95870011823340102}
   - component: {fileID: 143166762702812114}
   - component: {fileID: 114108711242437582}
+  - component: {fileID: 114476094515838920}
   m_Layer: 0
   m_Name: BossZuckerberg
   m_TagString: Enemy
@@ -1407,6 +1408,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+--- !u!114 &114476094515838920
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1693965015686552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e43f58e3ddeb66743b99a0e3983bd3bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeOutTexture: {fileID: 2800000, guid: 6365e1137aefeaa4a92a5e36ca74c0cf, type: 3}
+  fadeSpeed: 0.4
+  loadLevel: Main Menu
 --- !u!114 &114866999009974968
 MonoBehaviour:
   m_ObjectHideFlags: 1

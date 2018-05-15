@@ -21,6 +21,8 @@ namespace FightTheAbyss
 
         public AudioSource puzzleSolved;
 
+        public GameObject mainLogic;
+
         private bool circuit3And;
         private bool Light3And;
         private bool Light2Or;
@@ -41,6 +43,8 @@ namespace FightTheAbyss
 
         private bool puzzleIsSolved = false;
 
+        private bossDoor mainLogicScript;
+
 
         private void Start()
         {
@@ -58,6 +62,8 @@ namespace FightTheAbyss
 
             scriptColliseumDoor = ColliseumTowersDoor.GetComponent<MoveDoor>();
             scriptFloatingDoor = FloatingPlatformsDoor.GetComponent<MoveDoor>();
+
+            mainLogicScript = mainLogic.GetComponent<bossDoor>();
         }
 
         void ChangeLightBools()
@@ -86,6 +92,10 @@ namespace FightTheAbyss
             {
                 scriptColliseumDoor.moveDoorDown();
                 scriptFloatingDoor.moveDoorDown();
+                // Signal main logic, the puzzle is complete, light puzzle torch
+                mainLogicScript.puzzleIsSolved();
+
+
                 // Destroy the script, it is not needed anymore
                 Destroy(this);
             } else

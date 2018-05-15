@@ -38,12 +38,12 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.016215177, g: 0.014748086, b: 0.013871239, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -19937,6 +19937,61 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 1.0000037, z: 2.0000064}
   m_Center: {x: -0.00000017881393, y: 0, z: -0.00000023841858}
+--- !u!1 &292742671
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 292742672}
+  - component: {fileID: 292742673}
+  m_Layer: 0
+  m_Name: ColliseumTowersClear
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &292742672
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 292742671}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 294110162}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &292742673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 292742671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dce48a2b2d23e7248bfd3912079586da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemy1: {fileID: 0}
+  Enemy2: {fileID: 0}
+  Enemy3: {fileID: 0}
+  Enemy4: {fileID: 0}
+  Enemy5: {fileID: 0}
+  Enemy6: {fileID: 0}
+  door: {fileID: 765446838}
+  doorSpeed: 1
+  mainLogic: {fileID: 1061942731}
+  isFloatingPlatformsNotColliseum: 0
+--- !u!4 &294110162 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4781849564697648, guid: de946cbcfc556664d8eb07067f17a509,
+    type: 2}
+  m_PrefabInternal: {fileID: 563227897}
 --- !u!1 &297303422 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000010207558660, guid: 995824c2189f1004d92d9eb1b5e0d633,
@@ -32292,6 +32347,56 @@ Transform:
   m_PrefabParentObject: {fileID: 4000010605328026, guid: 09cd6fa57baf40045bb06c15669e4c60,
     type: 2}
   m_PrefabInternal: {fileID: 490393062}
+--- !u!1 &491089112
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 491089113}
+  - component: {fileID: 491089114}
+  m_Layer: 0
+  m_Name: FlatingPlatformsClear
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &491089113
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 491089112}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 294110162}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &491089114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 491089112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dce48a2b2d23e7248bfd3912079586da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemy1: {fileID: 0}
+  Enemy2: {fileID: 0}
+  Enemy3: {fileID: 0}
+  Enemy4: {fileID: 0}
+  Enemy5: {fileID: 0}
+  Enemy6: {fileID: 0}
+  door: {fileID: 2018179762}
+  doorSpeed: 1
+  mainLogic: {fileID: 1061942731}
+  isFloatingPlatformsNotColliseum: 1
 --- !u!1001 &494470974
 Prefab:
   m_ObjectHideFlags: 0
@@ -33105,6 +33210,49 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 16, y: 2.0000582, z: 16.000008}
   m_Center: {x: -0.0000009536743, y: -0.9999695, z: 0.0000047683716}
+--- !u!1001 &563227897
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1061942732}
+    m_Modifications:
+    - target: {fileID: 4781849564697648, guid: de946cbcfc556664d8eb07067f17a509, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781849564697648, guid: de946cbcfc556664d8eb07067f17a509, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781849564697648, guid: de946cbcfc556664d8eb07067f17a509, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781849564697648, guid: de946cbcfc556664d8eb07067f17a509, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781849564697648, guid: de946cbcfc556664d8eb07067f17a509, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781849564697648, guid: de946cbcfc556664d8eb07067f17a509, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781849564697648, guid: de946cbcfc556664d8eb07067f17a509, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781849564697648, guid: de946cbcfc556664d8eb07067f17a509, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114167198612519174, guid: de946cbcfc556664d8eb07067f17a509, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: de946cbcfc556664d8eb07067f17a509, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &567784515
 GameObject:
   m_ObjectHideFlags: 0
@@ -37674,7 +37822,7 @@ GameObject:
   - component: {fileID: 677554831}
   - component: {fileID: 677554832}
   m_Layer: 0
-  m_Name: Torch (2)
+  m_Name: UpperTorch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37713,7 +37861,7 @@ MonoBehaviour:
   Etincelles: {fileID: 204656963}
   Fumee: {fileID: 1911068577}
   MaxLightIntensity: 2
-  IntensityLight: 1
+  IntensityLight: 0
 --- !u!1001 &678309159
 Prefab:
   m_ObjectHideFlags: 0
@@ -42420,6 +42568,7 @@ MonoBehaviour:
   ColliseumTowersDoor: {fileID: 765446838}
   FloatingPlatformsDoor: {fileID: 2018179762}
   puzzleSolved: {fileID: 0}
+  mainLogic: {fileID: 1061942731}
 --- !u!82 &743915125
 AudioSource:
   m_ObjectHideFlags: 0
@@ -46420,6 +46569,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8.000002, y: 2.00003, z: 8.000007}
   m_Center: {x: -0.00000071525574, y: -0.99999976, z: 0.00000333786}
+--- !u!1 &824738052 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1927842886732914, guid: 8d6b7fee22bedea4cbae0f00a92a0a4e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1959074234}
 --- !u!1 &835088976 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000010197766018, guid: 7c9f81d3257169b4c9f3d09f4b804d5a,
@@ -62653,6 +62807,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1061942732}
+  - component: {fileID: 1061942733}
   m_Layer: 0
   m_Name: Logic
   m_TagString: Untagged
@@ -62671,10 +62826,27 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 743915123}
+  - {fileID: 2083002060}
   - {fileID: 1519963333}
+  - {fileID: 294110162}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1061942733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1061942731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fee5cc87f2600049957ca6643f0ee99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  finalDoor: {fileID: 824738052}
+  upperTorch: {fileID: 677554830}
+  leftTorch: {fileID: 2119428709}
+  rightTorch: {fileID: 2107064936}
 --- !u!1 &1070382895
 GameObject:
   m_ObjectHideFlags: 0
@@ -71063,6 +71235,16 @@ Prefab:
       propertyPath: door
       value: 
       objectReference: {fileID: 765446838}
+    - target: {fileID: 114187627051720142, guid: cd9bdbba625239442b1f36f934aa5d2a,
+        type: 2}
+      propertyPath: clearLogic
+      value: 
+      objectReference: {fileID: 292742671}
+    - target: {fileID: 65617499532070258, guid: cd9bdbba625239442b1f36f934aa5d2a,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd9bdbba625239442b1f36f934aa5d2a, type: 2}
   m_IsPrefabParent: 0
@@ -80699,14 +80881,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1519963332}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1511434501}
   - {fileID: 1231309981}
   m_Father: {fileID: 1061942732}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1542168707
 Prefab:
@@ -102343,6 +102525,16 @@ Prefab:
       propertyPath: door
       value: 
       objectReference: {fileID: 2018179762}
+    - target: {fileID: 114187627051720142, guid: cd9bdbba625239442b1f36f934aa5d2a,
+        type: 2}
+      propertyPath: clearLogic
+      value: 
+      objectReference: {fileID: 491089112}
+    - target: {fileID: 65617499532070258, guid: cd9bdbba625239442b1f36f934aa5d2a,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd9bdbba625239442b1f36f934aa5d2a, type: 2}
   m_IsPrefabParent: 0
@@ -103646,7 +103838,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2083002059}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.0737915, y: 24.121094, z: -50.79297}
+  m_LocalPosition: {x: -414.91757, y: -307.95224, z: -110.67398}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 880120054}
@@ -103655,8 +103847,8 @@ Transform:
   - {fileID: 1093110771}
   - {fileID: 1059859758}
   - {fileID: 1267190209}
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_Father: {fileID: 1061942732}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2093813819
 Prefab:
@@ -103748,7 +103940,7 @@ GameObject:
   - component: {fileID: 2107064938}
   - component: {fileID: 2107064937}
   m_Layer: 0
-  m_Name: Torch
+  m_Name: RightTorch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103772,7 +103964,7 @@ MonoBehaviour:
   Etincelles: {fileID: 1667106214}
   Fumee: {fileID: 1149607161}
   MaxLightIntensity: 2
-  IntensityLight: 1
+  IntensityLight: 0
 --- !u!4 &2107064938
 Transform:
   m_ObjectHideFlags: 0
@@ -103798,7 +103990,7 @@ GameObject:
   - component: {fileID: 2119428710}
   - component: {fileID: 2119428711}
   m_Layer: 0
-  m_Name: Torch (1)
+  m_Name: LeftTorch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103837,7 +104029,7 @@ MonoBehaviour:
   Etincelles: {fileID: 803417427}
   Fumee: {fileID: 469580109}
   MaxLightIntensity: 2
-  IntensityLight: 1
+  IntensityLight: 0
 --- !u!1001 &2124210588
 Prefab:
   m_ObjectHideFlags: 0

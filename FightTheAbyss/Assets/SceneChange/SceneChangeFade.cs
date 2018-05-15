@@ -47,11 +47,15 @@ namespace FightTheAbyss
             BeginFade(-1);
         }
 
-        private void changeScene()
+        public void changeScene(string level)
         {
             float fadeTime = BeginFade(1);
+            // Fading takes time
             new WaitForSeconds(fadeTime);
-            SceneManager.LoadScene(loadLevel);
+            //SceneManager.LoadScene(level);
+
+            // Asincronous loading works better for smooth experience
+            SceneManager.LoadSceneAsync(level);
         }
 
         [SerializeField] private string loadLevel;
@@ -60,7 +64,7 @@ namespace FightTheAbyss
         {
             if (other.CompareTag("Player"))
             {
-                changeScene();
+                changeScene(loadLevel);
             }
         }
     }

@@ -26,10 +26,12 @@ namespace FightTheAbyss
         public Transform player;
         private Animator anim;
         private CharacterController controller;
+        private SceneChangeFade sceneChange;
 
         // Use this for initialization
         void Start()
         {
+            sceneChange = GetComponent<SceneChangeFade>();
             anim = GetComponent<Animator>();
             controller = GetComponent<CharacterController>();
             anim.SetBool("isIdle", true);
@@ -46,6 +48,7 @@ namespace FightTheAbyss
             // Check to destroy if dead.
             if (anim.GetBool("dead"))
             {
+                sceneChange.changeScene("Main Menu");
                 Destroy(this.gameObject);
             }
 
