@@ -7,7 +7,6 @@ namespace FightTheAbyss
 {
     public class DeathMenu : MonoBehaviour
     {
-        private bool isCursorVisible = false;
 
         public GameObject sceneFade;
         private SceneChangeFade scriptSceneFade;
@@ -17,16 +16,6 @@ namespace FightTheAbyss
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             scriptSceneFade = sceneFade.GetComponent<SceneChangeFade>();
-        }
-
-        public void Update()
-        {
-            if (!isCursorVisible)
-            {
-                isCursorVisible = true;
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
-            }
         }
 
         public void RetryGame()
