@@ -21,6 +21,7 @@ namespace FightTheAbyss
         float remainingInvul = 0;
         bool chasing = false;
         bool playerInRange = false;
+        bool alive = true;
         AudioSource attackSound;
         AudioSource deathSound;
         AudioSource hitSound;
@@ -121,7 +122,7 @@ namespace FightTheAbyss
         {
             // Make it aware of your presence
             chasing = true;
-            if (!anim.GetBool("dying"))
+            if (alive)
             {
                 if (remainingInvul <= 0)
                 {
@@ -134,6 +135,7 @@ namespace FightTheAbyss
                     }
                     else
                     {
+                        alive = false;
                         controller.detectCollisions = false;
                         anim.SetBool("dying", true);
                         GetComponentInChildren<PotionSpawn>().DropPotion(this.potionProbability, this.transform.position, this.transform.rotation);
