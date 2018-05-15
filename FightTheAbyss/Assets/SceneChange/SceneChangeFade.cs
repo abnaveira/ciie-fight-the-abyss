@@ -52,10 +52,7 @@ namespace FightTheAbyss
             float fadeTime = BeginFade(1);
             // Fading takes time
             new WaitForSeconds(fadeTime);
-            //SceneManager.LoadScene(level);
-
-            // Asincronous loading works better for smooth experience
-            SceneManager.LoadSceneAsync(level);
+            SceneManager.LoadScene(level);
         }
 
         [SerializeField] private string loadLevel;
