@@ -154,7 +154,7 @@ namespace FightTheAbyss
             while (i < hitColliders.Length)
             {
                 if (hitColliders[i].CompareTag("Player"))
-                    player.gameObject.GetComponent<FightTheAbyss.States>().health -= DAMAGE;
+                    player.gameObject.GetComponent<FightTheAbyss.States>().takeDamage(DAMAGE);
                 i++;
             }
         }

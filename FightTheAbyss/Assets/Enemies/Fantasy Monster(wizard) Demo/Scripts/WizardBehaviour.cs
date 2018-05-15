@@ -172,7 +172,7 @@ namespace FightTheAbyss
         {
             if (playerInRange)
             {
-                player.gameObject.GetComponent<FightTheAbyss.States>().health -= DAMAGE;
+                player.gameObject.GetComponent<FightTheAbyss.States>().takeDamage(DAMAGE);
             }
 
         }
