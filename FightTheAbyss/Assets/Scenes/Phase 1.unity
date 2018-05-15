@@ -6608,14 +6608,10 @@ Prefab:
       propertyPath: staminaUI
       value: 
       objectReference: {fileID: 1328046215}
-    - target: {fileID: 114351451764063034, guid: f95d1a9483a8c6a4496c281ffd93702c,
+    - target: {fileID: 114944436271668724, guid: f95d1a9483a8c6a4496c281ffd93702c,
         type: 2}
-      propertyPath: lockCursor
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1969145986120274, guid: f95d1a9483a8c6a4496c281ffd93702c, type: 2}
-      propertyPath: m_IsActive
-      value: 1
+      propertyPath: collisionsLayer.m_Bits
+      value: 4294967039
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f95d1a9483a8c6a4496c281ffd93702c, type: 2}

@@ -708,7 +708,7 @@ BlendTree:
     m_Motion: {fileID: 7400000, guid: d08b566ab11817745b512eac89d6114b, type: 3}
     m_Threshold: 0.8
     m_Position: {x: 0, y: 0}
-    m_TimeScale: 1
+    m_TimeScale: 0.7
     m_CycleOffset: 0
     m_DirectBlendParameter: horizontal
     m_Mirror: 0
@@ -1036,7 +1036,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 3
     m_ConditionEvent: distanceToGround
-    m_EventTreshold: 0.25
+    m_EventTreshold: 1.2
   - m_ConditionMode: 2
     m_ConditionEvent: grounded
     m_EventTreshold: 0
@@ -1315,7 +1315,7 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 3
     m_ConditionEvent: distanceToGround
-    m_EventTreshold: 0.25
+    m_EventTreshold: 1.2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102435338203420272}
   m_Solo: 0
@@ -1732,7 +1732,7 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 3
     m_ConditionEvent: distanceToGround
-    m_EventTreshold: 0.25
+    m_EventTreshold: 1.2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102435338203420272}
   m_Solo: 0
@@ -1993,7 +1993,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 3
     m_ConditionEvent: distanceToGround
-    m_EventTreshold: 0.25
+    m_EventTreshold: 1.2
   - m_ConditionMode: 2
     m_ConditionEvent: grounded
     m_EventTreshold: 0
@@ -2101,7 +2101,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 3
     m_ConditionEvent: distanceToGround
-    m_EventTreshold: 0.25
+    m_EventTreshold: 1.2
   - m_ConditionMode: 2
     m_ConditionEvent: grounded
     m_EventTreshold: 0
@@ -2209,7 +2209,7 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 3
     m_ConditionEvent: distanceToGround
-    m_EventTreshold: 0.25
+    m_EventTreshold: 1.2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102435338203420272}
   m_Solo: 0
@@ -3382,7 +3382,7 @@ AnimatorStateMachine:
     m_Position: {x: 552, y: 204, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102435338203420272}
-    m_Position: {x: 1116, y: 816, z: 0}
+    m_Position: {x: 1044, y: 696, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions:

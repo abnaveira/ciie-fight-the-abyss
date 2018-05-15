@@ -8,11 +8,14 @@ namespace FightTheAbyss
         #region movementBehaviours
         //Move
         public static float GroundCheckStartPointOffset = 0.7f;//usado en groundChecks para que la componente vertical no quede por debajo del suelo.
-        public static float GroundCheckDistance = 0.71f;//distancia para el groundCheck
+        public static float GroundCheckDistance = 0.7f;//distancia para el groundCheck
         public static float GroundOffset = 0;//La distancia a la que queremos estar del suelo
         public static float PercentageOfVelocityForMovingBackwards = 0.7f;//Que porcentaje de la velocidad 'normal' se usa para ir de espaldas
         public static float WalkToIdleLerpFraction = 0.3f; //Entre 0 y 1. 0 tarda mas en parar y 1 para en seco
         public static float IdleToWalkLerpFraction = 0.05f;//Lo mismo que WalkToIdleLerpFraction pero para para empezar a andar.
+
+        public static float ObstacleForwardVerticalOffset = 0.05f;//Para hacer el obstacle check
+        public static float DistanceToCheckDistanceFordward = 0.5f;
         #endregion
         #region statsParameters
         public static float StaminaLossFromSprint = 0.1f;

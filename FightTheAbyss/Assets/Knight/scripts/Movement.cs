@@ -43,6 +43,7 @@ namespace FightTheAbyss
         {
             if (states.grounded && states.onLocomotion && !states.jumpInput)
             {
+                Debug.Log("1");
 
                 float targetSpeed;
                 if (states.sprintInput && states.vertical > 0 && !states.lockSprint)
@@ -63,6 +64,7 @@ namespace FightTheAbyss
             }
             else if (states.currentState == States.CharStates.OnAir)
             {
+
                 Vector3 v = inputs.camManager.pivot.transform.forward * states.vertical;
                 Vector3 h = inputs.camManager.pivot.transform.right * states.horizontal;
                 v.y = 0;
@@ -70,6 +72,21 @@ namespace FightTheAbyss
                 Vector3 targetVelocity = (h + v).normalized * states.onAirSpeed;
                 targetVelocity.y = states.rigid.velocity.y;
                 states.rigid.velocity = targetVelocity;
+            }
+            else if (states.lowObstacleFordward)
+            {
+                if (transform.position == states.lowObstacleClimbPos)
+                {
+                    states.lowObstacleFordward = false;
+                    states.rigid.isKinematic = false;
+                    states.skipGroundCheck = false;
+                    
+                }
+                else
+                {
+                    transform.position = Vector3.MoveTowards(transform.position, states.lowObstacleClimbPos, 0.1f);
+
+                }
             }
         }
 
@@ -89,6 +106,7 @@ namespace FightTheAbyss
 
         private void HandleVelocity_Normal(float speed)
         {
+           
             Vector3 curVelocity = states.rigid.velocity;
             Vector3 targetVelocity;
             float lerpFraction;

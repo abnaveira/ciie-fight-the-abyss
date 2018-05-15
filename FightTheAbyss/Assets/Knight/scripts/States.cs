@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 namespace FightTheAbyss { 
     public class States : MonoBehaviour {
         [Header("Inputs")]
@@ -28,6 +30,7 @@ namespace FightTheAbyss {
         public bool grounded;
         public bool onLocomotion;
         public bool objectHitWithAxe;
+        public bool lowObstacleFordward;
         public bool busy;
         public enum CharStates {Idle,Moving,OnAir }
         public CharStates currentState;
@@ -63,6 +66,8 @@ namespace FightTheAbyss {
         #region auxiliarVariables
         [HideInInspector] public bool skipGroundCheck;
         private float healthForStain1, healthForStain2, healthForStain3;
+        [HideInInspector] public Vector3 lowObstacleClimbPos;
+
         #endregion
 
 
@@ -101,13 +106,14 @@ namespace FightTheAbyss {
 
         public void Tick()
         {
-
             grounded = isGrounded();
             UpdateLocomotion();
             //Debug.Log(anim.GetFloat(Statics.animDistanceToGround));
         }
         public void FixedTick()
         {
+            handleObstacleFordward();
+
             UpdateState();
             UpdateHealth();
             UpdateStamina();
@@ -121,6 +127,10 @@ namespace FightTheAbyss {
             {
                 scale.x = 0;
                 health = 0;
+                SceneManagement.lastScene = SceneManager.GetActiveScene().name;
+                SceneManager.LoadScene(SceneManagement.deathScene);
+
+                
             }else if (health >= healthMaxValue)
             {
                 scale.x = 1;
@@ -165,7 +175,7 @@ namespace FightTheAbyss {
             if (anim.GetBool(Statics.animSprint) && !lockSprint)
             {
                 // Stamina Buff makes the character not lose stamina
-                if (!staminaBuff)
+                if (!staminaBuff && onLocomotion)
                 {
                     stamina -= Statics.StaminaLossFromSprint;
                 }
@@ -192,10 +202,57 @@ namespace FightTheAbyss {
             staminaUI.transform.localScale = scale;
         }
 
+        private void handleObstacleFordward()
+        {
+            Vector3 direction = (camera.transform.forward * vertical + camera.transform.right * horizontal).normalized;
+            Vector3 origin = transform.position + (transform.up * Statics.ObstacleForwardVerticalOffset);
+            RaycastHit hit=new RaycastHit();
+            if( findObstacle(origin, direction, Statics.DistanceToCheckDistanceFordward,ref hit))
+            {
+                Vector3 origin2 = origin + (transform.up * 0.8f);
+                origin2 += direction * 0.5f;
+
+                if (findObstacle(origin2, -transform.up,0.4f,ref hit))
+                {
+                    lowObstacleFordward = true;
+                    skipGroundCheck = true;
+                    rigid.isKinematic = true;
+                    lowObstacleClimbPos = hit.point;
+                }
+                
+            }
+            
+            
+        }
+
+        private bool findObstacle(Vector3 origin, Vector3 direction, float distanceToCheck,ref RaycastHit hit)
+        {
+            RaycastHit hit2 = new RaycastHit();
+            int numberOfHits = 0;
+            for (int i = -1; i < 2; i++)
+            {
+                Vector3 newOrigin = origin;
+                newOrigin += transform.right * (i * 0.3f);
+                Debug.DrawRay(newOrigin, direction * distanceToCheck, Color.cyan);
+                if (i == 0)
+                {
+                    if (Physics.Raycast(newOrigin, direction, out hit, distanceToCheck))
+                        numberOfHits++;
+                }
+                else
+                {
+                    if (Physics.Raycast(newOrigin, direction, out hit2, distanceToCheck))
+                        numberOfHits++;
+                }
+            }
+            return numberOfHits >= 2;
+        }
         private bool isGrounded()
         {
             if (skipGroundCheck)
                 return false;
+
+
             Vector3 origin = transform.position + (Vector3.up * Statics.GroundCheckStartPointOffset);
 
             RaycastHit hit = new RaycastHit();
@@ -269,7 +326,7 @@ namespace FightTheAbyss {
         {
             if (busy)
                 return;
-            if (!grounded)
+            if (!grounded && !lowObstacleFordward)
             {
                 currentState = CharStates.OnAir;
                 return;
