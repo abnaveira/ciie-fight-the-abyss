@@ -18,7 +18,8 @@ namespace FightTheAbyss
 
         public void RetryGame(string scene)
         {
-            scriptSceneFade.changeScene(scene);
+            Debug.LogWarning(SceneManagement.lastScene);
+            scriptSceneFade.changeScene(SceneManagement.lastScene);
         }
 
         public void ExitGame()
