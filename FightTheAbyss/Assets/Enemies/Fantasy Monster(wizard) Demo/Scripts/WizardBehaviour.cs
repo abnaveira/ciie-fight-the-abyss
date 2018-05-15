@@ -21,7 +21,7 @@ namespace FightTheAbyss
         float remainingInvul = 0;
         bool chasing = false;
         bool playerInRange = false;
-        bool playOnce = true;
+        bool alive = true;
         Vector3 origin;
         AudioSource attackSound;
         AudioSource deathSound;
@@ -144,7 +144,7 @@ namespace FightTheAbyss
         {
             // Make it aware of your presence
             chasing = true;
-            if (!anim.GetBool("dying"))
+            if (alive)
             {
                 if (remainingInvul <= 0)
                 {
@@ -157,7 +157,7 @@ namespace FightTheAbyss
                     }
                     else
                     {
-                        controller.detectCollisions = false;
+                        alive = false;
                         anim.SetBool("dying", true);
                         Vector3 position = this.transform.position;
                         position.y += 0.07f;

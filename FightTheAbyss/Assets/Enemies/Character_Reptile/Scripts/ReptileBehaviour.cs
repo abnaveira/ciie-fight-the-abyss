@@ -19,6 +19,7 @@ namespace FightTheAbyss
         float currentHP;
         float attackTime = 0;
         float remainingInvul = 0;
+        bool alive = true;
         bool switchAttack = false;
         bool chasing = false;
         bool playerInRange = false;
@@ -57,6 +58,7 @@ namespace FightTheAbyss
             // Check to destroy if dead.
             if (anim.GetBool("dead"))
             {
+                Cursor.visible = true;
                 sceneChange.changeScene("Main Menu");
                 Destroy(this.gameObject);
             }
@@ -130,7 +132,7 @@ namespace FightTheAbyss
         public override void TakeDamage(int amount)
         {
             chasing = true;
-            if (!anim.GetBool("dying"))
+            if (alive)
             {
                 if (remainingInvul <= 0)
                 {
@@ -143,7 +145,7 @@ namespace FightTheAbyss
                     }
                     else if (!anim.GetBool("dying"))
                     {
-                        controller.detectCollisions = false;
+                        alive = false;
                         anim.SetBool("dying", true);
                         deathSound.Play();
                         //GetComponentInChildren<PotionSpawn>().DropPotion(1, this.transform.position, this.transform.rotation);
