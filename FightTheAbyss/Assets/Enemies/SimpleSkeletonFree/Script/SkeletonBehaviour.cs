@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -49,7 +50,7 @@ namespace FightTheAbyss
         // Update is called once per frame
         void FixedUpdate()
         {
-            
+
             // Check to decrease invulnerability counter
             if (remainingInvul > 0)
                 remainingInvul -= Time.deltaTime;
@@ -84,8 +85,8 @@ namespace FightTheAbyss
                 if (direction.magnitude > RANGE)
                 {
                     // This stops the enemy from slipping along the ground with still legs
-                    if (!anim.GetBool("lockedInPlace") )
-                        controller.SimpleMove(SPEED * this.transform.forward);
+                    if (!anim.GetBool("lockedInPlace"))
+                        controller.SimpleMove(SPEED * this.transform.forward + 10 * Vector3.down);
                     anim.SetBool("isRunning", true);
                     anim.SetBool("isAttacking", false);
                 }
@@ -104,11 +105,12 @@ namespace FightTheAbyss
                     anim.SetBool("isAttacking", false);
                     anim.SetBool("isRunning", true);
                     this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(difference), 0.1f);
-                    controller.SimpleMove(SPEED * this.transform.forward);
+                    controller.SimpleMove(SPEED * this.transform.forward + 10 * Vector3.down);
                 }
                 else
                 {
-                    anim.SetBool("isRunning", false);
+                    anim.SetBool("isRunning", false)
+;
                     anim.SetBool("isIdle", true);
                 }
                 chasing = false;
@@ -142,13 +144,13 @@ namespace FightTheAbyss
 
 
         private void CastAttack()
-        {            
+        {
             Collider[] hitColliders = Physics.OverlapSphere(this.transform.position, 2);
             int i = 0;
             attackSound.Play();
             while (i < hitColliders.Length)
-            {                
-                if(hitColliders[i].CompareTag("Player"))
+            {
+                if (hitColliders[i].CompareTag("Player"))
                     player.gameObject.GetComponent<FightTheAbyss.States>().health -= DAMAGE;
                 i++;
             }

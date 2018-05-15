@@ -65,6 +65,7 @@ namespace FightTheAbyss
 
             // Check sight angle to emulate the monster seeing you
             Vector3 direction = player.position - this.transform.position;
+            direction.y = 0;
             float angle = Vector3.Angle(direction, this.transform.forward);
 
             // If it hasn't seen you before, start chase
@@ -76,7 +77,7 @@ namespace FightTheAbyss
             {
 
                 // This prevents the monster from swiveling upwards and downwards
-                direction.y = 0;
+                
                 this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(direction), 0.1f);
 
                 // Monster is no longer idle
@@ -157,7 +158,9 @@ namespace FightTheAbyss
                     else
                     {
                         anim.SetBool("dying", true);
-                        GetComponentInChildren<PotionSpawn>().DropPotion(this.potionProbability, this.transform.position, this.transform.rotation);
+                        Vector3 position = this.transform.position;
+                        position.y += 0.07f;
+                        GetComponentInChildren<PotionSpawn>().DropPotion(this.potionProbability, position, this.transform.rotation);
                         deathSound.Play();
                     }
                 }
