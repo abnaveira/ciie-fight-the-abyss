@@ -1813,6 +1813,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   maximumDistance: 0
+  potionProbability: 0
 --- !u!114 &114704759619722878
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1824,6 +1825,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bc4831a892b8ad4388f2aee67516fcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthPotion: {fileID: 1448594223209606, guid: a28d9fef2e2327e4abfbd94aea52f241,
+    type: 2}
+  staminaPotion: {fileID: 1286549676726638, guid: 1bb66650c1e2d3e4fbc76145e2da22ac,
+    type: 2}
+  crossbowPotion: {fileID: 1919001798749074, guid: 004a569b997d8fe40a59599bcc8702c6,
+    type: 2}
   health_potion_chance: 0.7
   unlimited_stamina_chance: 0.2
   unlimited_crossbow_chance: 0.1

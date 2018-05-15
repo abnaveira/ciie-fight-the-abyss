@@ -56,7 +56,7 @@ LightmapSettings:
   m_LightmapEditorSettings:
     serializedVersion: 9
     m_Resolution: 2
-    m_BakeResolution: 10
+    m_BakeResolution: 40
     m_TextureWidth: 1024
     m_TextureHeight: 1024
     m_AO: 1
@@ -16169,6 +16169,24 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -457.024
       objectReference: {fileID: 0}
+    - target: {fileID: 114015236089858632, guid: 93cd055ed8cdb5b43a94fe3b11d9dbaf,
+        type: 2}
+      propertyPath: healthPotion
+      value: 
+      objectReference: {fileID: 1448594223209606, guid: a28d9fef2e2327e4abfbd94aea52f241,
+        type: 2}
+    - target: {fileID: 114015236089858632, guid: 93cd055ed8cdb5b43a94fe3b11d9dbaf,
+        type: 2}
+      propertyPath: staminaPotion
+      value: 
+      objectReference: {fileID: 1286549676726638, guid: 1bb66650c1e2d3e4fbc76145e2da22ac,
+        type: 2}
+    - target: {fileID: 114015236089858632, guid: 93cd055ed8cdb5b43a94fe3b11d9dbaf,
+        type: 2}
+      propertyPath: crossbowPotion
+      value: 
+      objectReference: {fileID: 1919001798749074, guid: 004a569b997d8fe40a59599bcc8702c6,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 93cd055ed8cdb5b43a94fe3b11d9dbaf, type: 2}
   m_IsPrefabParent: 0

@@ -157,6 +157,7 @@ namespace FightTheAbyss
                     }
                     else
                     {
+                        controller.detectCollisions = false;
                         anim.SetBool("dying", true);
                         Vector3 position = this.transform.position;
                         position.y += 0.07f;
