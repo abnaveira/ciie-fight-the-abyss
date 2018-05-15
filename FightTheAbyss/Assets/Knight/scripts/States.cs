@@ -95,8 +95,8 @@ namespace FightTheAbyss {
             componentExists(rigid, "rigidbody");
             componentExists(collider, "capsuleCollider");
             healthForStain1 = healthMaxValue / 2;
-            healthForStain2 = healthMaxValue / 4;
-            healthForStain3 = healthMaxValue / 8;
+            healthForStain2 = healthMaxValue / 3;
+            healthForStain3 = healthMaxValue / 4;
         }
         private void componentExists(Object obj, string name)
         {
@@ -135,6 +135,13 @@ namespace FightTheAbyss {
             {
                 scale.x = 1;
                 health = healthMaxValue;
+                if (camera.postProccesingBehaviour.profile.vignette.settings.intensity != 0)
+                {
+                    UnityEngine.PostProcessing.VignetteModel.Settings settings = camera.postProccesingBehaviour.profile.vignette.settings;
+                    settings.intensity = 0;
+                    settings.mask = null;
+                    camera.postProccesingBehaviour.profile.vignette.settings = settings;
+                }
             }
             else { 
                 scale.x = health / healthMaxValue;
@@ -160,10 +167,12 @@ namespace FightTheAbyss {
                 }
                 else
                 {
-                    UnityEngine.PostProcessing.VignetteModel.Settings settings = camera.postProccesingBehaviour.profile.vignette.settings;
-                    settings.intensity = 0;
-                    settings.mask = null;
-                    camera.postProccesingBehaviour.profile.vignette.settings = settings;
+                    if (camera.postProccesingBehaviour.profile.vignette.settings.intensity != 0) { 
+                        UnityEngine.PostProcessing.VignetteModel.Settings settings = camera.postProccesingBehaviour.profile.vignette.settings;
+                        settings.intensity = 0;
+                        settings.mask = null;
+                        camera.postProccesingBehaviour.profile.vignette.settings = settings;
+                    }
                 }
 
             }

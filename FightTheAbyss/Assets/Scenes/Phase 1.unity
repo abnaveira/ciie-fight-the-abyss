@@ -6613,6 +6613,21 @@ Prefab:
       propertyPath: collisionsLayer.m_Bits
       value: 4294967039
       objectReference: {fileID: 0}
+    - target: {fileID: 114944436271668724, guid: f95d1a9483a8c6a4496c281ffd93702c,
+        type: 2}
+      propertyPath: bloodStain1
+      value: 
+      objectReference: {fileID: 2800000, guid: d35f740513531d8488b394d7d8e616f2, type: 3}
+    - target: {fileID: 114944436271668724, guid: f95d1a9483a8c6a4496c281ffd93702c,
+        type: 2}
+      propertyPath: bloodStain2
+      value: 
+      objectReference: {fileID: 2800000, guid: 2a0804b7e4d00ed4ca83dad4eb50336b, type: 3}
+    - target: {fileID: 114944436271668724, guid: f95d1a9483a8c6a4496c281ffd93702c,
+        type: 2}
+      propertyPath: bloodStain3
+      value: 
+      objectReference: {fileID: 2800000, guid: ecc26dde49601304ab1cb24c9eec0ec2, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f95d1a9483a8c6a4496c281ffd93702c, type: 2}
   m_IsPrefabParent: 0

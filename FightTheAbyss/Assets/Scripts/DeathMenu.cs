@@ -16,7 +16,7 @@ namespace FightTheAbyss
             scriptSceneFade = sceneFade.GetComponent<SceneChangeFade>();
         }
 
-        public void RetryGame(string scene)
+        public void RetryGame()
         {
             Debug.LogWarning(SceneManagement.lastScene);
             scriptSceneFade.changeScene(SceneManagement.lastScene);
