@@ -134,6 +134,7 @@ namespace FightTheAbyss
                     }
                     else
                     {
+                        controller.detectCollisions = false;
                         anim.SetBool("dying", true);
                         GetComponentInChildren<PotionSpawn>().DropPotion(this.potionProbability, this.transform.position, this.transform.rotation);
                         deathSound.Play();
