@@ -124,15 +124,19 @@ namespace FightTheAbyss {
         {
             if (axeDefense)
             {
-                float val = damage-stamina;
-                if (val > 0)
+                // If you have stamina buff, you can defend infinitely
+                if (!staminaBuff)
                 {
-                    health -= val;
-                    stamina = 0;
-                }
-                else
-                {
-                    stamina -= damage;
+                    float val = damage - stamina;
+                    if (val > 0)
+                    {
+                        health -= val;
+                        stamina = 0;
+                    }
+                    else
+                    {
+                        stamina -= damage;
+                    }
                 }
             }
             else

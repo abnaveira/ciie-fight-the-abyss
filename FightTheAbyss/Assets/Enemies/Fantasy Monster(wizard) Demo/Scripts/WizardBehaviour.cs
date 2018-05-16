@@ -106,7 +106,7 @@ namespace FightTheAbyss
                     anim.SetBool("move_forward_fast", false);
                     anim.SetBool("idle_combat", true);
                     // Check if an attack can be made and make it
-                    if (attackTime <= 0 && (!anim.GetBool("dying")))
+                    if (attackTime <= 0 && alive)
                     {
                         anim.SetBool("attack_short_001", true);
                         anim.SetFloat("attackTime", attackSpeed);
