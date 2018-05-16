@@ -6,6 +6,10 @@ namespace FightTheAbyss
 {
     public class bossDoor : MonoBehaviour
     {
+        public GameObject finalBoss;
+        public Transform finalBossPosition;
+        public GameObject sceneChangeEmpty;
+        public GameObject player;
 
         public GameObject finalDoor;
 
@@ -18,6 +22,7 @@ namespace FightTheAbyss
         private Torchelight scriptRightTorch;
 
         private MoveDoor scriptBossDoor;
+        private ReptileBehaviour scriptFinalBoss;
 
         private bool puzzleSolved = false;
         private bool colliseumTowersFinished = false;
@@ -31,6 +36,7 @@ namespace FightTheAbyss
             scriptRightTorch = rightTorch.GetComponent<Torchelight>();
 
             scriptBossDoor = finalDoor.GetComponent<MoveDoor>();
+            scriptFinalBoss = finalBoss.GetComponent<ReptileBehaviour>();
         }
 
         public void puzzleIsSolved()
@@ -54,9 +60,13 @@ namespace FightTheAbyss
         // Update is called once per frame
         void Update()
         {
-            if (puzzleSolved && colliseumTowersFinished && floatingTowersFinished)
+            if (puzzleSolved && !colliseumTowersFinished && !floatingTowersFinished)
             {
                 scriptBossDoor.moveDoorDown();
+
+                scriptFinalBoss.player = player.transform;
+                scriptFinalBoss.changeSceneEmpty = sceneChangeEmpty;
+                Instantiate(finalBoss, finalBossPosition.position, finalBossPosition.rotation);
 
                 // Destroy the script, it is not needed anymore
                 Destroy(this);

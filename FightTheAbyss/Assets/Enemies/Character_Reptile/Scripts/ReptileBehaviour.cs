@@ -25,6 +25,7 @@ namespace FightTheAbyss
         bool playerInRange = false;
 
         public Transform player;
+        public GameObject changeSceneEmpty;
         private Animator anim;
         private CharacterController controller;
         private SceneChangeFade sceneChange;
@@ -36,7 +37,7 @@ namespace FightTheAbyss
         // Use this for initialization
         void Start()
         {
-            sceneChange = GetComponent<SceneChangeFade>();
+            sceneChange = changeSceneEmpty.GetComponent<SceneChangeFade>();
             anim = GetComponent<Animator>();
             controller = GetComponent<CharacterController>();
             anim.SetBool("isIdle", true);
