@@ -178,5 +178,10 @@ namespace FightTheAbyss
         {
             Attack(DAMAGE2);
         }
+
+        void OnDestroy()
+        {
+            sceneChange.changeScene("Main Menu");
+        }
     }
 }
