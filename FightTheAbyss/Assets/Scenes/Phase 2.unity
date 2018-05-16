@@ -24423,6 +24423,16 @@ Prefab:
       propertyPath: m_Name
       value: SceneChangeEmpty
       objectReference: {fileID: 0}
+    - target: {fileID: 114714297147539798, guid: a69997af5b942fa4fb959b83bdf0f587,
+        type: 2}
+      propertyPath: controlsTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: 1f445bddb966a1b48b0390933d2b7ae7, type: 3}
+    - target: {fileID: 114714297147539798, guid: a69997af5b942fa4fb959b83bdf0f587,
+        type: 2}
+      propertyPath: loadingTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: 41ac380f441ceea4dafb6558ba6c856a, type: 3}
     m_RemovedComponents:
     - {fileID: 65052870075686522, guid: a69997af5b942fa4fb959b83bdf0f587, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: a69997af5b942fa4fb959b83bdf0f587, type: 2}

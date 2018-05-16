@@ -2782,8 +2782,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1969145986120274}
-  m_LocalRotation: {x: -0.00000000592447, y: 0.99996114, z: 2.4271057e-10, w: -0.0088155875}
-  m_LocalPosition: {x: 16.9, y: 26.5, z: 49.5}
+  m_LocalRotation: {x: -0.000000005891647, y: 0.99673396, z: 6.684436e-10, w: -0.080755256}
+  m_LocalPosition: {x: 16.9, y: 24.23, z: 49.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4312732149386352}
@@ -2799,7 +2799,7 @@ Transform:
   - {fileID: 4631625539104904}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 181.01, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 189.26399, z: 0}
 --- !u!4 &4448809369542850
 Transform:
   m_ObjectHideFlags: 1
@@ -4933,6 +4933,7 @@ MonoBehaviour:
   onLocomotion: 0
   objectHitWithAxe: 0
   lowObstacleFordward: 0
+  axeDefense: 0
   busy: 0
   currentState: 0
   locomotionState: 1
@@ -5012,7 +5013,7 @@ CapsuleCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1969145986120274}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: c2815a7ab32e42c4bb42f59caacb8ec1, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.3
