@@ -60,7 +60,7 @@ namespace FightTheAbyss
         // Update is called once per frame
         void Update()
         {
-            if (puzzleSolved && !colliseumTowersFinished && !floatingTowersFinished)
+            if (puzzleSolved && colliseumTowersFinished && floatingTowersFinished)
             {
                 scriptBossDoor.moveDoorDown();
 
